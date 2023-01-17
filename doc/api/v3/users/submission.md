@@ -1,4 +1,4 @@
-# Device Submission forms API v3
+# Web Forms User Submission forms API v3
 ### Submission form endpoints in JSON
 
 * [GET `/api/v3/submission_authors.json`](./submission-json.md#json-get-all-submission-authors)
