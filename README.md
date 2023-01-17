@@ -30,13 +30,13 @@ https://docs.devicemagic.com/en/articles/3334936-api-response-codes
 ## Endpoints
 ### JSON
   * Devices
-    * [Submission v3](./api/v3/devices/submission.md)
+    * [Submission v3](./doc/api/v3/devices/submission.md)
   * Users
-    * [Submission v3](./api/v3/users/submission.md)  
+    * [Submission v3](./doc/api/v3/users/submission.md)  
 
 ### XML
   * Devices
-    * [Submission v3](./api/v3/devices/submission.md)
+    * [Submission v3](./doc/api/v3/devices/submission.md)
   * Users
-    * [Submission v3](./api/v3/users/submission.md) 
+    * [Submission v3](./doc/api/v3/users/submission.md) 
     
