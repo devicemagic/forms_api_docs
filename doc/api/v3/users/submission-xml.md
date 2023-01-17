@@ -50,7 +50,7 @@ email | string | Email address of the author, available when the type is User
 
 ---
 
-# XML POST create submission from a form or dispatch for device
+# XML POST create submission from a form or dispatch for user
 
 * POST `/api/v3/users/:user_id/submissions.xml` 
 
