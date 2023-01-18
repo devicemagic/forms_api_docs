@@ -67,9 +67,8 @@ Key | Type | Description
 Key | Type | Description
 --- | --- | ---
 payload | object | Required. XML submission, the XML needs to be escaped using `\` and newline replaced with \r\n. There are two
-parameters that need to be passed in the XML as below:
-  form_namespace | string | Required. Unique namespace of the form template
-  submission_identifier | string | Required. Unique value (UUID).
+parameters that need to be passed in the XML, one is form_namespace (string, Unique namespace of the form template) and the other submission_identifier
+(string, Unique value UUID).
 
 **Example request:**
 

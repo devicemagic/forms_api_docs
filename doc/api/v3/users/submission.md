@@ -7,4 +7,3 @@
 
 ### Submission form endpoints in XML
 * [GET `/api/v3/submission_authors.xml`](./submission-xml.md#xml-get-all-submission-authors)
-* [POST `/api/v3/users/:user_id/submissions.xml`](./submission-xml.md#xml-post-create-submission-from-a-form-or-dispatch-for-user)
