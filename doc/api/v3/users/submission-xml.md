@@ -47,38 +47,3 @@ identifier | string | Unique id a user or device
 type | string | Type of author. Can be either 'Device' or 'User'
 name | string | Name of the author
 email | string | Email address of the author, available when the type is User
-
----
-
-# XML POST create submission from a form or dispatch for user
-
-* POST `/api/v3/users/:user_id/submissions.xml` 
-
-Returns a `HTTP 202 accepted` status 
-
-### URI parameters
-
-Key | Type | Description
---- | --- | ---
-:user_id | string | Unique string identifier of a User
-
-### Body is still json
-
-Key | Type | Description
---- | --- | ---
-form_namespace | string | Required. Unique namespace of the form template
-submission_identifier | string | Required. Unique value (UUID). It needs to be changed or the submission will fail.
-payload | object | Required. XML submission, the XML needs to be escaped using `\` and newline replaced with \r\n.
-
-**Example request:**
-
-```json
-curl \
--u your_api_token:x \
--X POST \
--d \
-{"payload": "\u003c?xml version='1.0' encoding='UTF-8'?\u003e\n\u003cinstance xmlns='your_form_namespace_here' submissionIdentifier='your_submission_identifier_here'\u003e\n\u003ca\u003e\n\u003cb\u003e88562-4446\u003c/b\u003e\n\u003c/a\u003e\n\u003c/instance\u003e"} \
-https://api.devicemagic.com/api/v3/users/1/submissions.xml
-```
-The above request, with `your_api_token` in the `Authorization` header, will return a `HTTP 202 Accepted` status, response body
-will be empty.
