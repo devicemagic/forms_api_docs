@@ -105,7 +105,16 @@ The above request, with `your_api_token` in the `Authorization` header, will ret
 
 ```xml
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<instance xmlns="http://www.devicemagic.com/xforms/12345678-abcd-1234-abcd-123456789" xmlns:dm="http://mobileforms.devicemagic.com/xforms" submissionIdentifier="12345678-abcd-1234-abcd-123456789" submittingDevice="Android_12345678-abcd-1234-abcd-123456789" writeTime="2023-02-02T10:25:46.103-0500" formVersion="1.00" dm:submit_time="2023-02-25T19:08:40Z" dm:form="Test Form" dm:form_id="123" dm:form_version="1.00" dm:submitting_user="test@devicemagic.com" dm:submitting_device="Android_b0d2608b-a5da-4648-a68d-123456789" dm:submitting_user_id="User#123">
+<instance xmlns="http://www.devicemagic.com/xforms/12345678-abcd-1234-abcd-123456789" 
+  xmlns:dm="http://mobileforms.devicemagic.com/xforms" 
+  submissionIdentifier="12345678-abcd-1234-abcd-123456789" 
+  submittingDevice="Android_12345678-abcd-1234-abcd-123456789" 
+  writeTime="2023-02-02T10:25:46.103-0500" formVersion="1.00" 
+  dm:submit_time="2023-02-25T19:08:40Z" dm:form="Test Form" 
+  dm:form_id="123" dm:form_version="1.00" 
+  dm:submitting_user="test@devicemagic.com" 
+  dm:submitting_device="Android_b0d2608b-a5da-4648-a68d-123456789" 
+  dm:submitting_user_id="User#123">
     <inputs>
         <Question1>Answer1</Question1>
         <Question2>Answer2</Question2>
