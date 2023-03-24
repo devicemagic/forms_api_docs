@@ -57,7 +57,7 @@ Key | Type | Description
 :device_identifier | string | Unique string identifier of a device
 :image_identifier | string | Unique string identifier to identiy the image being uploaded. Defined when the submission was uploaded
 
-## GET create submission Image MD5 for a user
+## GET submission Image MD5 for a user
 
 * GET `/api/v3/users/:user_id/submission_images/:image_identifier/get_md5` 
 
