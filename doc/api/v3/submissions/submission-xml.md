@@ -48,7 +48,7 @@ type | string | Type of author. Can be either 'Device' or 'User'
 name | string | Name of the author
 email | string | Email address of the author, available when the type is User
 
-# XML GET submission XMl
+# XML GET submission XML
 
 * GET `/api/v3/submissions/:submission_id` 
 
