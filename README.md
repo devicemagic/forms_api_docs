@@ -30,9 +30,9 @@ https://docs.devicemagic.com/en/articles/3334936-api-response-codes
 ## Endpoints
   * [Submission v3](./doc/api/v3/submission.md)
     * GET all submission authors
-      * [GET `/api/v3/submission_authors.json`](./doc/api/v3/submission.md#json-get-all-submission-authors)
+      * [GET `/api/v3/submission_authors.(json|xml)`](./doc/api/v3/submission.md#json-get-all-submission-authors)
     * GET submission xml
       * [GET `/api/v3/submissions/:user_id`](./doc/api/v3/submission.md#xml-get-submission-xml)
-    * POST create submission from a form or dispatch for device
+    * POST create submission from a form for a device or user
       * [POST `/api/v3/devices/:device_identifier/submissions.json`](./doc/api/v3/submission.md#json-post-create-submission-from-a-form-or-dispatch-for-device)
       * [POST `/api/v3/devices/:user/submissions.json`](./doc/api/v3/submission.md#json-post-create-submission-from-a-form-or-dispatch-for-user)
