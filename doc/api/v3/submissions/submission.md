@@ -9,8 +9,8 @@ Returns an array of `authors` (all devices and users with webforms access) with 
 
 ### URI query parameters
 
-Key | Type | | Required | Description
---- | --- | ---
+Key | Type |  Required | Description
+--- | --- | --- | ---
 items | integer | false |  Allow the client to request a custom number of items per page. Defaults to 100
 page | integer | false | Allow the client to request specific page for item results. Defaults to 1
 
