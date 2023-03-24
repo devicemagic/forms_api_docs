@@ -44,6 +44,6 @@ https://docs.devicemagic.com/en/articles/3334936-api-response-codes
       * [POST `/api/v3/devices/:device_identifier/submissions_image`](./doc/api/v3/submission_image.md#post-create-submission-image-for-a-device)
       * [POST `/api/v3/devices/:user/submissions_image`](./doc/api/v3/submission_image.md#post-create-submission-image-for-a-user)
     * GET get image md5  
-      * [GET `/api/v3/devices/:device_identifier/submissions.json`](./doc/api/v3/submission.md#get-submission-image-md5-for-a-device)
-      * [GET `/api/v3/devices/:user/submissions.json`](./doc/api/v3/submission.md#get-submission-image-md5-for-a-user)
+      * [GET `/api/v3/devices/:device_identifier/submissions.json`](./doc/api/v3/submission_image.md#get-submission-image-md5-for-a-device)
+      * [GET `/api/v3/devices/:user/submissions.json`](./doc/api/v3/submission_image.md#get-submission-image-md5-for-a-user)
 
