@@ -1,4 +1,4 @@
-# Device Submission forms API v3
+# Submissions API v3
 
 
 ## JSON|XML GET all submission authors
