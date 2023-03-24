@@ -29,9 +29,8 @@ https://docs.devicemagic.com/en/articles/3334936-api-response-codes
 
 ## Endpoints
   * [Submission v3](./doc/api/v3/submissions/submission.md)
-#### JSON
-  * [Submission v3](./doc/api/v3/submissions/submission-json.md)
-
-#### XML
-  * [Submission v3](./doc/api/v3/submissions/submission-xml.md)
+    * JSON
+      * [Submission v3](./doc/api/v3/submissions/submission-json.md)
+    * XML
+      * [Submission v3](./doc/api/v3/submissions/submission-xml.md)
     
