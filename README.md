@@ -28,14 +28,22 @@ https://docs.devicemagic.com/en/articles/3334936-api-response-codes
   * `500` Internal Server Error
 
 ## Endpoints
-  * [Submission v3](./doc/api/v3/submission.md)
+  * [BIRT Service](./doc/api/v3/birt_service.md)
+    * GET download submission image
+      * [GET `/api/v3/download_submission_image`](./doc/api/v3/birt_service.md#get-download-submission-image)
+  * [Submission](./doc/api/v3/submission.md)
     * GET all submission authors
       * [GET `/api/v3/submission_authors.(json|xml)`](./doc/api/v3/submission.md#json-get-all-submission-authors)
     * GET submission xml
       * [GET `/api/v3/submissions/:user_id`](./doc/api/v3/submission.md#xml-get-submission-xml)
     * POST create submission from a form for a device or user
-      * [POST `/api/v3/devices/:device_identifier/submissions.json`](./doc/api/v3/submission.md#json-post-create-submission-from-a-form-or-dispatch-for-device)
-      * [POST `/api/v3/devices/:user/submissions.json`](./doc/api/v3/submission.md#json-post-create-submission-from-a-form-or-dispatch-for-user)
-  * [BIRT Service v3](./doc/api/v3/birt_service.md)
-    * GET download submission image
-      * [GET `/api/v3/download_submission_image`](./doc/api/v3/birt_service.md#get-download-submission-image)
+      * [POST `/api/v3/devices/:device_identifier/submissions.json`](./doc/api/v3/submission.md#json-post-create-submission-from-a-form-for-a-device)
+      * [POST `/api/v3/devices/:user/submissions.json`](./doc/api/v3/submission.md#json-post-create-submission-from-a-form-for-a-user)
+  * [Submission Images](./doc/api/v3/submission_image.md)
+    * POST create submission image  
+      * [POST `/api/v3/devices/:device_identifier/submissions_image`](./doc/api/v3/submission_image.md#post-create-submission-image-for-a-device)
+      * [POST `/api/v3/devices/:user/submissions_image`](./doc/api/v3/submission_image.md#post-create-submission-image-for-a-user)
+    * GET get image md5  
+      * [GET `/api/v3/devices/:device_identifier/submissions.json`](./doc/api/v3/submission.md#get-submission-image-md5-for-a-device)
+      * [GET `/api/v3/devices/:user/submissions.json`](./doc/api/v3/submission.md#get-submission-image-md5-for-a-user)
+

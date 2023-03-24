@@ -123,7 +123,7 @@ The above request, with `your_api_token` in the `Authorization` header, will ret
 ```
 ---
 
-## JSON POST create submission from a form or dispatch for device
+## JSON POST create submission from a form for a device
 
 * POST `/api/v3/devices/:device_identifier/submissions.json` 
 
@@ -135,7 +135,7 @@ Key | Type | Description
 --- | --- | ---
 :device_identifier | string | Unique string identifier of a device
 
-## JSON POST create submission from a form or dispatch for user
+## JSON POST create submission from a form for a user
 
 * POST `/api/v3/users/:user_id/submissions.json` 
 
