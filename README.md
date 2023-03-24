@@ -1,4 +1,4 @@
-# Device Magic API V2
+# Device Magic API V3
 
 The API expects all data to be UTF-8 encoded.
 This is a REST-style API that uses JSON/XML with Basic Authentication.
@@ -29,9 +29,9 @@ https://docs.devicemagic.com/en/articles/3334936-api-response-codes
 
 ## Endpoints
   * [Submission v3](./doc/api/v3/submissions/submission.md)
-### JSON
+#### JSON
   * [Submission v3](./doc/api/v3/submissions/submission-json.md)
 
-### XML
+#### XML
   * [Submission v3](./doc/api/v3/submissions/submission-xml.md)
     
