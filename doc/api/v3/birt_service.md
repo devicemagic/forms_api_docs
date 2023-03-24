@@ -22,4 +22,5 @@ https://api.devicemagic.com/submission_image:uuid
 
 The above request, with `your_api_token` in the `Authorization` header, will return a success status and all Authors with webform access
 
+**Response:**
 The response will be the binary data of the image
