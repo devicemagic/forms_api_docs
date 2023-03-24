@@ -44,7 +44,7 @@ The above request, with `your_api_token` in the `Authorization` header, will ret
 will be empty.
 
 
-## GET submission Image MD5
+## GET submission Image MD5 for a device
 
 * GET `/api/v3/devices/:device_identifier/submission_images/:image_identifier/get_md5` 
 
@@ -57,7 +57,7 @@ Key | Type | Description
 :device_identifier | string | Unique string identifier of a device
 :image_identifier | string | Unique string identifier to identiy the image being uploaded. Defined when the submission was uploaded
 
-## POST create submission Image for a user
+## GET create submission Image MD5 for a user
 
 * GET `/api/v3/users/:user_id/submission_images/:image_identifier/get_md5` 
 
