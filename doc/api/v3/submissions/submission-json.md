@@ -2,7 +2,7 @@
 
 * GET `/api/v3/submission_authors.json` 
 
-Returns an array of `authors` (all devices and users with webforms access)  with a **Author** object as value.
+Returns an array of `authors` (all devices and users with webforms access) with a **Author** object as value.
 
 ### URI query parameters
 
@@ -50,6 +50,18 @@ email | string | Email address of the author, available when the type is User
 
 ---
 
+# JSON POST create submission from a form or dispatch for device
+
+* POST `/api/v3/devices/:device_identifier/submissions.json` 
+
+Returns a `HTTP 202 accepted` status.
+
+### URI parameters
+
+Key | Type | Description
+--- | --- | ---
+:device_identifier | string | Unique string identifier of a device
+
 # JSON POST create submission from a form or dispatch for user
 
 * POST `/api/v3/users/:user_id/submissions.json` 
@@ -76,7 +88,7 @@ curl \
   -X POST \
   -d \
 {"payload": "\u003c?xml version='1.0' encoding='UTF-8'?\u003e\n\u003cinstance xmlns='your_form_namespace_here' submissionIdentifier='your_submission_identifier_here'\u003e\n\u003ca\u003e\n\u003cb\u003e88562-4446\u003c/b\u003e\n\u003c/a\u003e\n\u003c/instance\u003e"} \
-  https://api.devicemagic.com/api/v3/users/1/submissions.json
+  https://api.devicemagic.com/api/v3/devices/Android_123412b-1234-1234-1234-12341234/submissions.json
 ```
-The above request, with `your_api_token` in the `Authorization` header, will return a `HTTP 202 Accepted` status, response body
+The above request, with `your_api_token` in the `Authorization` header, will return a `HTTP 202 Accepted` status, response body 
 will be empty.

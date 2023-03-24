@@ -28,15 +28,10 @@ https://docs.devicemagic.com/en/articles/3334936-api-response-codes
   * `500` Internal Server Error
 
 ## Endpoints
+  * [Submission v3](./doc/api/v3/submissions/submission.md)
 ### JSON
-  * Devices
-    * [Submission v3](./doc/api/v3/devices/submission.md)
-  * Users
-    * [Submission v3](./doc/api/v3/users/submission.md)  
+  * [Submission v3](./doc/api/v3/submissions/submission-json.md)
 
 ### XML
-  * Devices
-    * [Submission v3](./doc/api/v3/devices/submission.md)
-  * Users
-    * [Submission v3](./doc/api/v3/users/submission.md) 
+  * [Submission v3](./doc/api/v3/submissions/submission-xml.md)
     
