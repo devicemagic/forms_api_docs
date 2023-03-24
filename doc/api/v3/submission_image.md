@@ -1,7 +1,7 @@
 # Submissions Image API v3
 
 
-## JSON POST create submission Image for a device
+## POST create submission Image for a device
 
 * POST `/api/v3/devices/:device_identifier/submission_images.json?image_identifier=:image_identifier&submission_identifer=:submission_identifer` 
 
@@ -15,7 +15,7 @@ Key | Type | Description
 :image_identifier | string | Unique string identifier to identiy the image being uploaded. Defined when the submission was uploaded
 :submission_identifer | string | Unique string identifier to identiy the submission the image is for. Defined when the submission was uploaded
 
-## JSON POST create submission Image for a user
+## POST create submission Image for a user
 
 * POST `/api/v3/users/:user_id/submission_images.json?image_identifier=:image_identifier&submission_identifer=:submission_identifer` 
 
@@ -44,7 +44,7 @@ The above request, with `your_api_token` in the `Authorization` header, will ret
 will be empty.
 
 
-## JSON GET submission Image MD5
+## GET submission Image MD5
 
 * GET `/api/v3/devices/:device_identifier/submission_images/:image_identifier/get_md5` 
 
@@ -57,7 +57,7 @@ Key | Type | Description
 :device_identifier | string | Unique string identifier of a device
 :image_identifier | string | Unique string identifier to identiy the image being uploaded. Defined when the submission was uploaded
 
-## JSON POST create submission Image for a user
+## POST create submission Image for a user
 
 * GET `/api/v3/users/:user_id/submission_images/:image_identifier/get_md5` 
 
