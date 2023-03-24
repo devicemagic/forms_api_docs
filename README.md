@@ -38,4 +38,4 @@ https://docs.devicemagic.com/en/articles/3334936-api-response-codes
       * [POST `/api/v3/devices/:user/submissions.json`](./doc/api/v3/submission.md#json-post-create-submission-from-a-form-or-dispatch-for-user)
   * [BIRT Service v3](./doc/api/v3/birt_service.md)
     * GET download submission image
-      * [GET `/api/v3/download_submission_image`](./doc/api/v3/birt_serices.md#get-download-submission-image)
+      * [GET `/api/v3/download_submission_image`](./doc/api/v3/birt_services.md#get-download-submission-image)
