@@ -130,18 +130,6 @@ curl \
 The above request, with `your_api_token` in the `Authorization` header, will return a `HTTP 202 Accepted` status, response body 
 will be empty.
 
-# Suported MIME types: #
-* image/png
-* image/jpeg
-* application/xml
-* text/xml
-* text/plain
-* application/vnd.device-magic.map-overlay.json
-* application/pdf
-* application/vnd.openxmlformats-officedocument.spreadsheetml.sheet
-* application/vnd.openxmlformats-officedocument.wordprocessingml.document
-
-
 ## JSON PUT update resource
 
 * PUT `/api/v3/resources/:resource_id.json` 
@@ -167,7 +155,7 @@ Key | Type | Description
 --- | --- | ---
 file_name | string | The name of the file
 file_data  | binary | Base64 encoded file data
-content_type | string | See supported [`mime types`](./resource.md#suported-mime-types) above
+content_type | string | See supported [`mime types`](./resource.md#suported-mime-types) below
 
 **Example request:**
 
@@ -181,3 +169,14 @@ curl \
 ```
 The above request, with `your_api_token` in the `Authorization` header, will return a `HTTP 202 Accepted` status, response body 
 will be empty.
+
+# Suported MIME types: #
+* image/png
+* image/jpeg
+* application/xml
+* text/xml
+* text/plain
+* application/vnd.device-magic.map-overlay.json
+* application/pdf
+* application/vnd.openxmlformats-officedocument.spreadsheetml.sheet
+* application/vnd.openxmlformats-officedocument.wordprocessingml.document
