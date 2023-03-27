@@ -269,7 +269,7 @@ include_inputs | boolean | Optional. A flag to include the field data for the di
 ```
 curl \
   -u your_api_token:x \
-  https://api.devicemagic.com/api/v3/dispatches.json/123
+  https://api.devicemagic.com/api/v3/dispatches/123.json
 ```
 The above request, with `your_api_token` in the `Authorization` header
 
@@ -460,3 +460,49 @@ Returns a `HTTP 202 accepted` status.
   <comments>Something new!</comments>
 </oneshot>
 ```
+
+## JSON DELETE dispatch
+
+* DELETE `/api/v3/dispatches/:dispatch_id.json` 
+
+Deletes the specified dispatch
+
+### URI parameters
+
+Key | Type | Description
+--- | --- | ---
+dispatch_id | integer |  The dispatch ID of the dispatch
+
+**Example request:**
+
+```
+curl \
+  -u your_api_token:x \
+  -X POST \  
+  https://api.devicemagic.com/api/v3/dispatches/123.json
+```
+The above request, with `your_api_token` in the `Authorization` header
+
+## JSON POST destroy all dispatch forms for a device
+
+* POST `/api/v3/devices/:device_identifier/dispatches/destroy_all.json` 
+
+Returns a `HTTP 200` status.
+
+### URI parameters
+
+Key | Type | Description
+--- | --- | ---
+:device_identifier | string | Unique string identifier of a device
+
+## JSON POST destroy all dispatch forms for a user
+
+* POST `/api/v3/users/:user_id/dispatches/destroy_all.json` 
+
+### URI parameters
+
+Key | Type | Description
+--- | --- | ---
+:user_id | string | Unique string identifier of a User
+
+Returns a `HTTP 200` status.

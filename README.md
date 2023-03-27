@@ -52,9 +52,9 @@ https://docs.devicemagic.com/en/articles/3334936-api-response-codes
 
     * DELETE destroy
       * [DELETE `/api/v3/dispatchs/:dispatch_id.json`](./doc/api/v3/dispatch.md#json-delete-destroy-dispatch)
-    * POST destroy all
-      * [POST `/api/v3/dispatchs/destroy_all.json`](./doc/api/v3/dispatch.md#json-post-destroy_all)
-
+    * POST destroy all dispatch forms for a device or user
+      * [POST `/api/v3/devices/:device_identifier/dispatches/destroy_all.json`](./doc/api/v3/dispatch.md#json-post-destroy-all-dispatch-forms-for-a-device)
+      * [POST `/api/v3/users/:user/dispatches/destroy_all.json`](./doc/api/v3/dispatch.md#json-post-destroy-all-dispatch-forms-for-a-user)
 
 
   * [Resource](./doc/api/v3/resource.md)
