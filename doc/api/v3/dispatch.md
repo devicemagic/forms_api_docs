@@ -371,6 +371,12 @@ Key | Type | Description
 
 * POST `/api/v3/users/:user_id/dispatches.(json|XML)` 
 
+### URI parameters
+
+Key | Type | Description
+--- | --- | ---
+:user_id | string | Unique string identifier of a User
+
 Returns a `HTTP 202 accepted` status.
 
 **Example JSON payload:**
@@ -417,6 +423,12 @@ Key | Type | Description
 ## JSON|XML PATCH update dispatch form for a user
 
 * PATCH `/api/v3/users/:user_id/dispatches.(json|XML)` 
+
+### URI parameters
+
+Key | Type | Description
+--- | --- | ---
+:user_id | string | Unique string identifier of a User
 
 Returns a `HTTP 202 accepted` status.
 
