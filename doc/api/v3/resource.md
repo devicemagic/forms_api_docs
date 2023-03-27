@@ -115,7 +115,7 @@ Key | Type | Description
 --- | --- | ---
 file_name | string | The name of the file
 file_data  | binary | Base64 encoded file data
-content_type | string | See supported `mime types`](./doc/api/v3/resource.md#suported-mime-types) below
+content_type | string | See supported [`mime types`](./doc/api/v3/resource.md#suported-mime-types) below
 
 **Example request:**
 
@@ -167,7 +167,7 @@ Key | Type | Description
 --- | --- | ---
 file_name | string | The name of the file
 file_data  | binary | Base64 encoded file data
-content_type | string | See supported `mime types`](./doc/api/v3/resource.md#suported-mime-types) above
+content_type | string | See supported [`mime types`](./doc/api/v3/resource.md#suported-mime-types) above
 
 **Example request:**
 
