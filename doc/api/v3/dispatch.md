@@ -5,14 +5,7 @@
 
 * GET `/api/v3/dispatch_authors.(json|xml)` 
 
-Returns an array of `authors` (all devices and users with webforms access) with a **Author** object as value.
-
-### URI query parameters
-
-Key | Type |  Required | Description
---- | --- | --- | ---
-items | integer | false |  Allow the client to request a custom number of items per page. Defaults to 100
-page | integer | false | Allow the client to request specific page for item results. Defaults to 1
+Returns an array of `authors` (all devices and users dispatches can be assigned to) with a **Author** object as value.
 
 **Example JSON request:**
 
@@ -50,7 +43,7 @@ The above request, with `your_api_token` in the `Authorization` header, will ret
   ]
 }
 ```
----
+
 **Example XML response body:**
 
 ```xml
@@ -70,7 +63,7 @@ The above request, with `your_api_token` in the `Authorization` header, will ret
   </author>
 </authors>
 ```
----
+
 **Authors object**
 
 Key | Type | Description
@@ -121,7 +114,7 @@ curl -u your_api_token:x \
   ]
 }
 ```
----
+
 **Example XML response body:**
 
 ```xml
@@ -142,7 +135,7 @@ curl -u your_api_token:x \
   </dispatch>
 </dispatches>
 ```
----
+
 ## JSON|XML GET index dispatch forms for a user
 
 * GET `/api/v3/users/:user_id/dispatches.json` 
@@ -182,7 +175,7 @@ curl -u your_api_token:x \
   ]
 }
 ```
----
+
 **Example XML response body:**
 
 ```xml
@@ -203,7 +196,7 @@ curl -u your_api_token:x \
   </dispatch>
 </dispatches>
 ```
----
+
 ## XML GET dispatch XML
 
 * GET `/api/v3/dispatches/:dispatch_id` 
@@ -245,7 +238,7 @@ The above request, with `your_api_token` in the `Authorization` header, will ret
     </inputs>
 </instance>
 ```
----
+
 
 ## JSON POST create dispatch form for a device
 
