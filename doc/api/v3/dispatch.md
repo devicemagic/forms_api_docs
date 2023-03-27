@@ -461,7 +461,7 @@ Returns a `HTTP 202 accepted` status.
 </oneshot>
 ```
 
-## JSON DELETE dispatch
+## JSON DELETE destroy dispatch
 
 * DELETE `/api/v3/dispatches/:dispatch_id.json` 
 
