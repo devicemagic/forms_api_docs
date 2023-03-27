@@ -35,9 +35,9 @@ https://docs.devicemagic.com/en/articles/3334936-api-response-codes
     * GET describe
       * [GET `/api/v3/resources/describe`](./doc/api/v3/resource.md#json|xml-get-describe)
     * POST create
-      * [GET `/api/v3/resources`](./doc/api/v3/resource.md#json-post-create)
+      * [GET `/api/v3/resources`](./doc/api/v3/resource.md#json-post-create-resource)
     * PUT update
-      * [PUT `/api/v3/resources`](./doc/api/v3/resource.md#json-put-update)
+      * [PUT `/api/v3/resources`](./doc/api/v3/resource.md#json-put-update-resource)
   * [Submission](./doc/api/v3/submission.md)
     * GET all submission authors
       * [GET `/api/v3/submission_authors.(json|xml)`](./doc/api/v3/submission.md#json|xml-get-all-submission-authors)
