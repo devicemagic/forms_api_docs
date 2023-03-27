@@ -253,7 +253,7 @@ curl -u your_api_token:x \
 
 ## JSON|XML GET show dispatch
 
-* GET `/api/v3/dispatches/:dispatch_id?include_inputs=false` 
+* GET `/api/v3/dispatches/:dispatch_id.(json|xml)?include_inputs=false` 
 
 Returns the xml of the dispatch originally submitted by the mobile device.
 
@@ -269,7 +269,7 @@ include_inputs | boolean | Optional. A flag to include the field data for the di
 ```
 curl \
   -u your_api_token:x \
-  https://api.devicemagic.com/api/v3/dispatches/123
+  https://api.devicemagic.com/api/v3/dispatches.json/123
 ```
 The above request, with `your_api_token` in the `Authorization` header
 
@@ -355,11 +355,9 @@ The above request, with `your_api_token` in the `Authorization` header
 </dispatch>
 ```
 
+## JSON|XML POST create dispatch form for a device
 
-
-## JSON POST create dispatch form for a device
-
-* POST `/api/v3/devices/:device_identifier/dispatches.json` 
+* POST `/api/v3/devices/:device_identifier/dispatches.(json|XML)` 
 
 Returns a `HTTP 202 accepted` status.
 
@@ -369,9 +367,44 @@ Key | Type | Description
 --- | --- | ---
 :device_identifier | string | Unique string identifier of a device
 
-## JSON POST create dispatch for a user
+## JSON POST create dispatch form for a user
 
-* POST `/api/v3/users/:user_id/dispatches.json` 
+* POST `/api/v3/users/:user_id/dispatches.(json|XML)` 
+
+Returns a `HTTP 202 accepted` status.
+
+**Example JSON payload:**
+```xml
+{
+    "form_namespace": "http://www.devicemagic.com/xforms/a189a8b0-e816-0137-7257-2cde48001122",
+    "form_name": "This is optional - you can change this element!",
+    "form_description": "This is a sample Push Form",
+    "location": "lat=35.7773663, long=-78.63876549999999",
+    "address": "227 Fayetteville St Suite 802, Raleigh, NC 27601, USA",
+    "scheduled_at": "2020-02-10T23:04:40+02:00",
+    "payload": {
+        "comments": "Easy, wasn't it?"
+    }
+}
+```
+
+**Example XML payload:**
+```xml
+<?xml version='1.0'?>
+<oneshot xmlns='http://www.w3.org/2002/xforms' xmlns:dm='http://mobileforms.devicemagic.com/xforms' xmlns:h='http://www.w3.org/1999/xhtml' xmlns:xsd='http://www.w3.org/2001/XMLSchema'>
+  <dm:form_name>This is optional - you can omit this element</dm:form_name>
+  <dm:form_namespace>http://www.devicemagic.com/xforms/demo/2d3698c0-650c-012e-7e8e-12313b079c72</dm:form_namespace>
+  <dm:form_description>This is a sample Push Form</dm:form_description>
+  <dm:location>lat=35.7773663, long=-78.63876549999999</dm:location>
+  <dm:address>227 Fayetteville St Suite 802, Raleigh, NC 27601, USA</dm:address>
+  <dm:scheduled_at>2020-02-10T23:04:40+02:00</dm:scheduled_at>
+  <comments>Easy, wasn't it?</comments>
+</oneshot>
+```
+
+## JSON|XML POST update dispatch form for a device
+
+* PATCH `/api/v3/devices/:device_identifier/dispatches.(json|XML)` 
 
 Returns a `HTTP 202 accepted` status.
 
@@ -379,22 +412,39 @@ Returns a `HTTP 202 accepted` status.
 
 Key | Type | Description
 --- | --- | ---
-:user_id | string | Unique string identifier of a User
+:device_identifier | string | Unique string identifier of a device
 
-### JSON dispatch form parameters
+## JSON POST update dispatch form for a user
 
-Key | Type | Description
---- | --- | ---
-payload | object | Required. XML dispatch, the XML needs to be escaped using `\` and newline replaced with \r\n. There are two parameters that need to be passed in the XML, one is form_namespace (string, Unique namespace of the form template) and the other dispatch_identifier (string, Unique value UUID).
+* PATCH `/api/v3/users/:user_id/dispatches.(json|XML)` 
 
-**Example request:**
+Returns a `HTTP 202 accepted` status.
 
-```json
-curl \
-  -u your_api_token:x \
-  -X POST \
-  -d \
-{"payload": "\u003c?xml version='1.0' encoding='UTF-8'?\u003e\n\u003cinstance xmlns='your_form_namespace_here' dispatchIdentifier='your_dispatch_identifier_here'\u003e\n\u003ca\u003e\n\u003cb\u003e88562-4446\u003c/b\u003e\n\u003c/a\u003e\n\u003c/instance\u003e"} \
-  https://api.devicemagic.com/api/v3/devices/Android_123412b-1234-1234-1234-12341234/dispatches.json
+**Example JSON payload:**
+```xml
+{
+    "form_namespace": "http://www.devicemagic.com/xforms/a189a8b0-e816-0137-7257-2cde48001122",
+    "form_name": "This is optional - you can change this element!",
+    "form_description": "This is a sample Push Form",
+    "location": "lat=35.7773663, long=-78.63876549999999",
+    "address": "227 Fayetteville St Suite 802, Raleigh, NC 27601, USA",
+    "scheduled_at": "2020-02-10T23:04:40+02:00",
+    "payload": {
+        "comments": "Something new!"
+    }
+}
 ```
-The above request, with `your_api_token` in the `Authorization` header
+
+**Example XML payload:**
+```xml
+<?xml version='1.0'?>
+<oneshot xmlns='http://www.w3.org/2002/xforms' xmlns:dm='http://mobileforms.devicemagic.com/xforms' xmlns:h='http://www.w3.org/1999/xhtml' xmlns:xsd='http://www.w3.org/2001/XMLSchema'>
+  <dm:form_name>This is optional - you can omit this element</dm:form_name>
+  <dm:form_namespace>http://www.devicemagic.com/xforms/demo/2d3698c0-650c-012e-7e8e-12313b079c72</dm:form_namespace>
+  <dm:form_description>This is a sample Push Form</dm:form_description>
+  <dm:location>lat=35.7773663, long=-78.63876549999999</dm:location>
+  <dm:address>227 Fayetteville St Suite 802, Raleigh, NC 27601, USA</dm:address>
+  <dm:scheduled_at>2020-02-10T23:04:40+02:00</dm:scheduled_at>
+  <comments>Something new!</comments>
+</oneshot>
+```
