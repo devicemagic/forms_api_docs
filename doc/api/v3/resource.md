@@ -1,7 +1,7 @@
 # Resource API v3
 
 
-## JSON|XML GET resource
+## JSON|XML GET describe resource
 
 * GET `/api/v3/resources/:resource_id/describe.(json|xml)` 
 

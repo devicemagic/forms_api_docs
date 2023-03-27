@@ -33,7 +33,7 @@ https://docs.devicemagic.com/en/articles/3334936-api-response-codes
       * [GET `/api/v3/download_submission_image`](./doc/api/v3/birt_service.md#get-download-submission-image)
   * [Resource](./doc/api/v3/resource.md)
     * GET describe
-      * [GET `/api/v3/resources/describe`](./doc/api/v3/resource.md#jsonxml-get-describe)
+      * [GET `/api/v3/resources/describe`](./doc/api/v3/resource.md#jsonxml-get-describe-resource)
     * POST create
       * [GET `/api/v3/resources`](./doc/api/v3/resource.md#json-post-create-resource)
     * PUT update
