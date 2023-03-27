@@ -129,7 +129,6 @@ curl \
 ```
 The above request, with `your_api_token` in the `Authorization` header, will return a `HTTP 202 Accepted` status, response body 
 will be empty.
----
 
 ## JSON PUT update resource
 
@@ -170,7 +169,6 @@ curl \
 ```
 The above request, with `your_api_token` in the `Authorization` header, will return a `HTTP 202 Accepted` status, response body 
 will be empty.
----
 
 ### Suported MIME types: ###
 * image/png
