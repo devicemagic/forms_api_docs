@@ -42,11 +42,11 @@ https://docs.devicemagic.com/en/articles/3334936-api-response-codes
     * GET show
       * [GET `/api/v3/dispatches/:dispatch_id.(json|xml)`](./doc/api/v3/dispatch.md#jsonxml-get-show-dispatch)
     * POST create dispatch form for a device or user
-      * [POST `/api/v3/devices/:device_identifier/dispatches.json`](./doc/api/v3/dispatch.md#json-post-create-dispatch-form-for-a-device)
-      * [POST `/api/v3/users/:user/dispatches.json`](./doc/api/v3/dispatch.md#json-post-create-dispatch-form-for-a-user)
+      * [POST `/api/v3/devices/:device_identifier/dispatches.json`](./doc/api/v3/dispatch.md#jsonxml-post-create-dispatch-form-for-a-device)
+      * [POST `/api/v3/users/:user/dispatches.json`](./doc/api/v3/dispatch.md#jsonxml-post-create-dispatch-form-for-a-user)
     * PATCH update a dispatch form for a device or user
-      * [PATCH `/api/v3/devices/:device_identifier/dispatches/:dispatch_id.json`](./doc/api/v3/dispatch.md#json-patch-update-dispatch-form-for-a-device)
-      * [PATCH `/api/v3/users/:user/dispatches/:dispatch_id.json`](./doc/api/v3/dispatch.md#json-patch-update-dispatch-form-for-a-user)
+      * [PATCH `/api/v3/devices/:device_identifier/dispatches/:dispatch_id.json`](./doc/api/v3/dispatch.md#jsonxml-patch-update-dispatch-form-for-a-device)
+      * [PATCH `/api/v3/users/:user/dispatches/:dispatch_id.json`](./doc/api/v3/dispatch.md#jsonxml-patch-update-dispatch-form-for-a-user)
 
 
 

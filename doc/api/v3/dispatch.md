@@ -367,7 +367,7 @@ Key | Type | Description
 --- | --- | ---
 :device_identifier | string | Unique string identifier of a device
 
-## JSON POST create dispatch form for a user
+## JSON|XML POST create dispatch form for a user
 
 * POST `/api/v3/users/:user_id/dispatches.(json|XML)` 
 
@@ -402,7 +402,7 @@ Returns a `HTTP 202 accepted` status.
 </oneshot>
 ```
 
-## JSON|XML POST update dispatch form for a device
+## JSON|XML PATCH update dispatch form for a device
 
 * PATCH `/api/v3/devices/:device_identifier/dispatches.(json|XML)` 
 
@@ -414,7 +414,7 @@ Key | Type | Description
 --- | --- | ---
 :device_identifier | string | Unique string identifier of a device
 
-## JSON POST update dispatch form for a user
+## JSON|XML PATCH update dispatch form for a user
 
 * PATCH `/api/v3/users/:user_id/dispatches.(json|XML)` 
 
