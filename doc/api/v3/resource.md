@@ -27,7 +27,7 @@ curl -u your_api_token:x \
 https://api.devicemagic.com/api/v3/resources/123/describe.xml
 ```
 
-The above request, with `your_api_token` in the `Authorization` header, will return a success status and all Authors with webform access
+The above request, with `your_api_token` in the `Authorization` header
 
 **Example JSON response body:**
 

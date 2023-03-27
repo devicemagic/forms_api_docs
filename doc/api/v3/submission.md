@@ -9,10 +9,10 @@ Returns an array of `authors` (all devices and users with webforms access) with 
 
 ### URI query parameters
 
-Key | Type |  Required | Description
---- | --- | --- | ---
-items | integer | false |  Allow the client to request a custom number of items per page. Defaults to 100
-page | integer | false | Allow the client to request specific page for item results. Defaults to 1
+Key | Type | Description
+--- | --- | ---
+items | integer | Optional. Allow the client to request a custom number of items per page. Defaults to 100
+page | integer | Optional. Allow the client to request specific page for item results. Defaults to 1
 
 **Example JSON request:**
 
@@ -99,7 +99,7 @@ curl \
   -u your_api_token:x \
   https://api.devicemagic.com/api/v3/submissions/123
 ```
-The above request, with `your_api_token` in the `Authorization` header, will return a success status and all devices and users with webforms access
+The above request, with `your_api_token` in the `Authorization` header
 
 **Example response body:**
 
