@@ -31,9 +31,16 @@ https://docs.devicemagic.com/en/articles/3334936-api-response-codes
   * [BIRT Service](./doc/api/v3/birt_service.md)
     * GET download submission image
       * [GET `/api/v3/download_submission_image`](./doc/api/v3/birt_service.md#get-download-submission-image)
+  * [Resource](./doc/api/v3/resource.md)
+    * GET describe
+      * [GET `/api/v3/resources/describe`](./doc/api/v3/resource.md#json|xml-get-describe)
+    * POST create
+      * [GET `/api/v3/resources`](./doc/api/v3/resource.md#json-post-create)
+    * PUT update
+      * [PUT `/api/v3/resources`](./doc/api/v3/resource.md#json-put-update)
   * [Submission](./doc/api/v3/submission.md)
     * GET all submission authors
-      * [GET `/api/v3/submission_authors.(json|xml)`](./doc/api/v3/submission.md#json-get-all-submission-authors)
+      * [GET `/api/v3/submission_authors.(json|xml)`](./doc/api/v3/submission.md#json|xml-get-all-submission-authors)
     * GET submission xml
       * [GET `/api/v3/submissions/:user_id`](./doc/api/v3/submission.md#xml-get-submission-xml)
     * POST create submission from a form for a device or user
