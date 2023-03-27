@@ -1,4 +1,4 @@
-# Dispatces API v3
+# Dispatches API v3
 
 
 ## JSON|XML GET all dispatch authors
