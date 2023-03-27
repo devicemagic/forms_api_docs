@@ -98,15 +98,9 @@ The above request, with `your_api_token` in the `Authorization` header, will ret
 
 ## JSON POST create resource
 
-* POST `/api/v3/resources/:resource_id.json` 
+* POST `/api/v3/resources.json` 
 
 Returns a `HTTP 202 accepted` status.
-
-### URI query parameters
-
-Key | Type |  Required | Description
---- | --- | --- | ---
-resource_id | integer | true | id of the resuorce
 
 ### JSON resource parameters
 
@@ -150,9 +144,15 @@ Suported MIME types:
 
 ## JSON PUT update resource
 
-* POST `/api/v3/resources.json` 
+* PUT `/api/v3/resources/:resource_id.json` 
 
 Returns a `HTTP 202 accepted` status.
+
+### URI query parameters
+
+Key | Type |  Required | Description
+--- | --- | --- | ---
+resource_id | integer | true | id of the resuorce
 
 ### JSON resource parameters
 
