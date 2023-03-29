@@ -28,9 +28,7 @@ https://docs.devicemagic.com/en/articles/3334936-api-response-codes
   * `500` Internal Server Error
 
 ## Endpoints
-  * [BIRT Service](./doc/api/v3/birt_service.md)
-    * GET download submission image
-      * [GET `/api/v3/download_submission_image`](./doc/api/v3/birt_service.md#get-download-submission-image)
+
   * [Dispatch](./doc/api/v3/dispatch.md)
     * GET all dispatch authors
       * [GET `/api/v3/dispatch_authors.(json|xml)`](./doc/api/v3/dispatch.md#jsonxml-get-all-dispatch-authors)
