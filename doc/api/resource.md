@@ -271,7 +271,7 @@ will be empty.
 
 ---
 
-## DELETE destropy resource
+## DELETE destroy resource
 
 * GET `https://api.devicemagic.com/api/resources/:id` 
 
