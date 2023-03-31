@@ -7,6 +7,13 @@
 
 Returns an array of `authors` (all devices and users dispatches can be assigned to) with a **Author** object as value.
 
+### URI query parameters
+
+Key | Type | Description
+--- | --- | ---
+items | integer |  Allow the client to request a custom number of items per page. Defaults to 100
+page | integer | Allow the client to request specific page for item results. Defaults to 1
+
 **Example JSON request:**
 
 ```
@@ -77,11 +84,20 @@ email | string | Email address of the author, available when the type is User
 
 * GET `/api/v3/devices/:device_identifier/dispatches.json` 
 
+Returns an array of **Dispatch** objects assigned to the device within a `dispatches` key
+
 ### URI parameters
 
 Key | Type | Description
 --- | --- | ---
 :device_identifier | string | Unique string identifier of a device
+
+### URI query parameters
+
+Key | Type | Description
+--- | --- | ---
+items | integer |  Allow the client to request a custom number of items per page. Defaults to 100
+page | integer | Allow the client to request specific page for item results. Defaults to 1
 
 **Example request:**
 
@@ -89,6 +105,9 @@ Key | Type | Description
 curl -u your_api_token:x \
   https://api.devicemagic.com/api/v3/devices/Android_123412b-1234-1234-1234-12341234/dispatches.json
 ```
+
+The above request, with `your_api_token` in the `Authorization` header, will return a success status and return all Dispatch forms belonging to a device with string identifier `Android_123412b-1234-1234-1234-12341234`
+
 
 **Example JSON response body:**
 
@@ -133,6 +152,24 @@ curl -u your_api_token:x \
   </dispatch>
 </dispatches>
 ```
+
+**Dispatch object**
+
+Key | Type | Description
+--- | --- | ---
+id | integer | Unique id of the form
+name | string | Name of the form
+namespace | string | Unique namespace of the form
+version | string | Dispatch form version
+organization_id | integer | Unique identifier of the organization that the form belongs to
+author_identifier | string | ID of the device/user that will submit this Dispatch form
+author_type | string | Type of resource that will be dispatched to, either 'User' or 'Device'
+description | string | Description of the form
+parent_form_id | integer | ID of the regular form that this Dispatch form was created from
+parent_form_version | string | Version of the regular form that this Dispatch form was created from
+created_at | timestamp | Time that the Dispatch form was created
+updated_at | timestamp | Time that the form was last changed
+scheduled_at | timestamp | Time that the dispatch form is set to become visible by devices
 
 ## JSON|XML GET index dispatch forms for a user
 
@@ -144,12 +181,21 @@ Key | Type | Description
 --- | --- | ---
 :user_id | string | Unique string identifier of a User
 
+### URI query parameters
+
+Key | Type | Description
+--- | --- | ---
+items | integer |  Allow the client to request a custom number of items per page. Defaults to 100
+page | integer | Allow the client to request specific page for item results. Defaults to 1
+
 **Example request:**
 
 ```json
 curl -u your_api_token:x \
   https://api.devicemagic.com/api/v3/users/1234/dispatches.json
 ```
+
+The above request, with `your_api_token` in the `Authorization` header, will return a success status and return all Dispatch forms belonging to a user with identifier `1234`
 
 **Example JSON response body:**
 
@@ -194,11 +240,36 @@ curl -u your_api_token:x \
   </dispatch>
 </dispatches>
 ```
+**Dispatch object**
+
+Key | Type | Description
+--- | --- | ---
+id | integer | Unique id of the form
+name | string | Name of the form
+namespace | string | Unique namespace of the form
+version | string | Dispatch form version
+organization_id | integer | Unique identifier of the organization that the form belongs to
+author_identifier | string | ID of the device/user that will submit this Dispatch form
+author_type | string | Type of resource that will be dispatched to, either 'User' or 'Device'
+description | string | Description of the form
+parent_form_id | integer | ID of the regular form that this Dispatch form was created from
+parent_form_version | string | Version of the regular form that this Dispatch form was created from
+created_at | timestamp | Time that the Dispatch form was created
+updated_at | timestamp | Time that the form was last changed
+scheduled_at | timestamp | Time that the dispatch form is set to become visible by devices
 
 ## JSON|XML GET organization dispatches
 
 * GET `/api/v3/organization_dispatches.(json|xml)` 
 
+Returns an array of objects each containing a `dispatches` key with a **Dispatch** object as value.
+
+### URI query parameters
+
+Key | Type | Description
+--- | --- | ---
+items | integer |  Allow the client to request a custom number of items per page. Defaults to 100
+page | integer | Allow the client to request specific page for item results. Defaults to 1
 
 **Example request:**
 
@@ -250,6 +321,23 @@ curl -u your_api_token:x \
   </dispatch>
 </dispatches>
 ```
+**Dispatch object**
+
+Key | Type | Description
+--- | --- | ---
+id | integer | Unique id of the form
+name | string | Name of the form
+namespace | string | Unique namespace of the form
+version | float | Dispatch form version
+organization_id | integer | Unique identifier of the organization that the form belongs to
+author_identifier | string | ID of the device/user that will submit this Dispatch form
+author_type | string | Type of resource that will be dispatched to, either 'User' or 'Device'
+description | string | Description of the form
+parent_form_id | integer | ID of the regular form that this Dispatch form was created from
+parent_form_version | float | Version of the regular form that this Dispatch form was created from
+created_at | timestamp | Time that the Dispatch form was created
+updated_at | timestamp | Time that the form was last changed
+scheduled_at | timestamp | Time that the dispatch form is set to become visible to users
 
 ## JSON|XML GET show dispatch
 
@@ -359,7 +447,7 @@ The above request, with `your_api_token` in the `Authorization` header
 
 * POST `/api/v3/devices/:device_identifier/dispatches.(json|XML)` 
 
-Returns a `HTTP 202 accepted` status.
+Returns a `HTTP 202 accepted` status and a `JSON` summary representation of the new Dispatch **form** object in the response body.
 
 ### URI parameters
 
@@ -377,7 +465,20 @@ Key | Type | Description
 --- | --- | ---
 :user_id | string | Unique string identifier of a User
 
-Returns a `HTTP 202 accepted` status.
+Returns a `HTTP 202 accepted` status and a `JSON` summary representation of the new Dispatch **form** object in the response body.
+
+### Dispatch form parameters
+
+Key | Type | Description
+--- | --- | ---
+form_name | string | Optional. Name of the Dispatch form
+form_namespace | string | Required. Unique namespace of the form template the Dispatch will be built from
+form_description | string | Optional. Description of the Dispatch form
+location | string | Optional. Lat/Long used to display the dispatch on devices, only when it is within this vicinity
+geofence_radius | string | Optional. Radius in meters or feet a device needs to be from the location before the form may be edited.
+address | string | Optional. Name of a place, should be used with `dm:location` property's Lat/long
+scheduled_at | string | Optional. Timestamp in ISO 8601 format to specify when devices should receive a dispatch
+payload | object | Required but may be empty. Keys/Values containing the pre-populated Dispatch form question and answers
 
 **Example JSON payload:**
 ```xml
@@ -410,7 +511,7 @@ Returns a `HTTP 202 accepted` status.
 
 ## JSON|XML PATCH update dispatch form for a device
 
-* PATCH `/api/v3/devices/:device_identifier/dispatches.(json|XML)` 
+* PATCH `/api/v3/devices/:device_identifier/dispatches/:id.(json|XML)` 
 
 Returns a `HTTP 202 accepted` status.
 
@@ -419,16 +520,18 @@ Returns a `HTTP 202 accepted` status.
 Key | Type | Description
 --- | --- | ---
 :device_identifier | string | Unique string identifier of a device
+:id | integer | Unique id of a Dispatch form
 
 ## JSON|XML PATCH update dispatch form for a user
 
-* PATCH `/api/v3/users/:user_id/dispatches.(json|XML)` 
+* PATCH `/api/v3/users/:user_id/dispatches/:id.(json|XML)` 
 
 ### URI parameters
 
 Key | Type | Description
 --- | --- | ---
 :user_id | string | Unique string identifier of a User
+:id | integer | Unique id of a Dispatch form
 
 Returns a `HTTP 202 accepted` status.
 
@@ -461,39 +564,73 @@ Returns a `HTTP 202 accepted` status.
 </oneshot>
 ```
 
-## JSON DELETE destroy dispatch
+# JSON DELETE Dispatch form for device
 
-* DELETE `/api/v3/dispatches/:dispatch_id.json` 
+* DELETE `/api/v3/devices/:device_identifier/dispatches/:id.json` 
 
-Deletes the specified dispatch
-
-### URI parameters
-
-Key | Type | Description
---- | --- | ---
-dispatch_id | integer |  The dispatch ID of the dispatch
-
-**Example request:**
-
-```
-curl \
-  -u your_api_token:x \
-  -X POST \  
-  https://api.devicemagic.com/api/v3/dispatches/123.json
-```
-The above request, with `your_api_token` in the `Authorization` header
-
-## JSON POST destroy all dispatch forms for a device
-
-* POST `/api/v3/devices/:device_identifier/dispatches/destroy_all.json` 
-
-Returns a `HTTP 200` status.
+Returns a `HTTP 200 Ok` status and an empty response body.
 
 ### URI parameters
 
 Key | Type | Description
 --- | --- | ---
 :device_identifier | string | Unique string identifier of a device
+:id | integer | Unique id of a Dispatch form
+
+**Example request:**
+
+```
+curl \
+  -u your_api_token:x \
+  -X DELETE \
+  https://api.devicemagic.com/api/v3/devices/Android_123412b-1234-1234-1234-12341234/dispatches/302.json
+```
+The above request, with `your_api_token` in the `Authorization` header, will return a `HTTP 200 OK` status and an empty body afer Dispatch form id `302` belonging to a device with string identifier `Android_123412b-1234-1234-1234-12341234` has been deleted
+
+# JSON DELETE Dispatch form for user
+
+* DELETE `/api/v3/users/:user_id/dispatches/:id.json` 
+
+Returns a `HTTP 200 Ok` status and an empty response body.
+
+### URI parameters
+
+Key | Type | Description
+--- | --- | ---
+:user_id | string | Unique string identifier of a user
+:id | integer | Unique id of a Dispatch form
+
+**Example request:**
+
+```
+curl \
+  -u your_api_token:x \
+  -X DELETE \
+  https://api.devicemagic.com/api/v3/users/1234/dispatches/302.json
+```
+The above request, with `your_api_token` in the `Authorization` header, will return a `HTTP 200 OK` status and an empty body afer Dispatch form id `302` belonging to a device with string identifier `Android_123412b-1234-1234-1234-12341234` has been deleted
+
+## JSON POST destroy all Dispatch forms for a device
+
+* POST `/api/v3/devices/:device_identifier/dispatches/destroy_all.json` 
+
+Returns a `HTTP 200 OK` status with an `empty` body, when all Dispatch forms belonging to the device are destroyed.
+
+### URI parameters
+
+Key | Type | Description
+--- | --- | ---
+:device_identifier | string | Unique string identifier of a device
+
+**Example request:**
+
+```
+curl \
+  -u your_api_token:x \
+  -X POST \
+  https://api.devicemagic.com/api/v3/devices/Android_123412b-1234-1234-1234-12341234/dispatches/destroy_all.json
+```
+The above request, with `your_api_token` in the `Authorization` header, will return a success status indicating all Dispatch forms belonging to device with string identifier `Android_123412b-1234-1234-1234-12341234` are destroyed.
 
 ## JSON POST destroy all dispatch forms for a user
 
@@ -505,4 +642,14 @@ Key | Type | Description
 --- | --- | ---
 :user_id | string | Unique string identifier of a User
 
-Returns a `HTTP 200` status.
+Returns a `HTTP 200 OK` status with an `empty` body, when all Dispatch forms belonging to the device are destroyed.
+
+**Example request:**
+
+```
+curl \
+  -u your_api_token:x \
+  -X POST \
+  https://api.devicemagic.com/api/v3/users/1234/dispatches/destroy_all.json
+```
+The above request, with `your_api_token` in the `Authorization` header, will return a success status indicating all Dispatch forms belonging to user with identifier `1234` are destroyed.
