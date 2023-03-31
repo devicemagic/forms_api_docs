@@ -56,7 +56,7 @@ https://docs.devicemagic.com/en/articles/3334936-api-response-codes
       * [POST `/api/v3/users/:user/dispatches/destroy_all.json`](./doc/api/v3/dispatch.md#json-post-destroy-all-dispatch-forms-for-a-user)
   * [Groups](./doc/api/v2/groups.md)
     * GET all organization groups
-      * [GET `/api/v2/organizations/:organization_id/groups.(json|xml)`](./groups.md#jsonxml-get-all-organization-groups)
+      * [GET `/api/v2/organizations/:organization_id/groups.(json|xml)`](./doc/api/v2/groups.md#jsonxml-get-all-organization-groups)
   * [Resource](./doc/api/v3/resource.md)
     * GET describe
       * [GET `/api/v3/resources/describe`](./doc/api/v3/resource.md#jsonxml-get-describe-resource)
