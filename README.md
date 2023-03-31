@@ -28,7 +28,9 @@ https://docs.devicemagic.com/en/articles/3334936-api-response-codes
 
 ## Endpoints
 
-  * [Devices](./doc/api/v2/devices.md)
+  * [Destinations](./doc/api/v2/destinations.md)
+
+  * [Devices](./doc/api/v2/device.md)
     * GET all organization devices
       * [GET `/api/v2/organizations/:organization_id/devices.(json|xml)`](./doc/api/v2/devices.md#jsonxml-get-all-organization-devices)
     * GET organization device
@@ -54,16 +56,22 @@ https://docs.devicemagic.com/en/articles/3334936-api-response-codes
     * POST destroy all dispatch forms for a device or user
       * [POST `/api/v3/devices/:device_identifier/dispatches/destroy_all.json`](./doc/api/v3/dispatch.md#json-post-destroy-all-dispatch-forms-for-a-device)
       * [POST `/api/v3/users/:user/dispatches/destroy_all.json`](./doc/api/v3/dispatch.md#json-post-destroy-all-dispatch-forms-for-a-user)
-  * [Groups](./doc/api/v2/groups.md)
+  * [Groups](./doc/api/v2/group.md)
     * GET all organization groups
       * [GET `/api/v2/organizations/:organization_id/groups.(json|xml)`](./doc/api/v2/groups.md#jsonxml-get-all-organization-groups)
   * [Resource](./doc/api/v3/resource.md)
-    * GET describe
+    * GET index resources
+      * [GET `/api/resources`](./doc/api/resource.md#jsonxml-index-resources)
+    * GET download a resource
+      * [GET `/api/resources/:id`](./doc/api/resource.md#get-download=resource)
+    * GET describe a resource
       * [GET `/api/v3/resources/describe`](./doc/api/v3/resource.md#jsonxml-get-describe-resource)
-    * POST create
+    * POST create a resource
       * [POST `/api/v3/resources`](./doc/api/v3/resource.md#json-post-create-resource)
-    * PUT update
+    * PUT update a resource
       * [PUT `/api/v3/resources`](./doc/api/v3/resource.md#json-put-update-resource)
+    * DELETE destroy a resource
+      * [DELETE `/api/resources/:id`](./doc/api/v1/resource.md#delete-destroy-resource)      
   * [Submission](./doc/api/v3/submission.md)
     * GET all submission authors
       * [GET `/api/v3/submission_authors.(json|xml)`](./doc/api/v3/submission.md#jsonxml-get-all-submission-authors)

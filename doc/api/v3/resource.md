@@ -1,4 +1,4 @@
-# Resource API v3
+# Resources API v3
 
 
 ## JSON|XML GET describe resource
@@ -11,7 +11,7 @@ Returns a resource.
 
 Key | Type |  Required | Description
 --- | --- | --- | ---
-resource_id | integer | true | id of the resuorce
+resource_id | integer | true | id of the resource
 
 **Example JSON request:**
 
@@ -130,6 +130,8 @@ curl \
 The above request, with `your_api_token` in the `Authorization` header, will return a `HTTP 202 Accepted` status, response body 
 will be empty.
 
+---
+
 ## JSON PUT update resource
 
 * PUT `/api/v3/resources/:resource_id.json` 
@@ -140,7 +142,7 @@ Returns a `HTTP 202 accepted` status.
 
 Key | Type |  Required | Description
 --- | --- | --- | ---
-resource_id | integer | true | id of the resuorce
+resource_id | integer | true | id of the resource
 
 ### JSON resource parameters
 
