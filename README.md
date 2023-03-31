@@ -61,9 +61,9 @@ https://docs.devicemagic.com/en/articles/3334936-api-response-codes
       * [GET `/api/v2/organizations/:organization_id/groups.(json|xml)`](./doc/api/groups.md#jsonxml-get-all-organization-groups)
   * [Resource](./doc/api/resource.md)
     * GET index resources
-      * [GET `/api/resources`](./doc/api/resource.md#jsonxml-index-resources)
+      * [GET `/api/resources`](./doc/api/resource.md#jsonxml-get-index-resources)
     * GET download a resource
-      * [GET `/api/resources/:id`](./doc/api/resource.md#get-download=resource)
+      * [GET `/api/resources/:id`](./doc/api/resource.md#get-download-resource)
     * GET describe a resource
       * [GET `/api/v3/resources/describe`](./doc/api/resource.md#jsonxml-get-describe-resource)
     * POST create a resource
@@ -71,7 +71,7 @@ https://docs.devicemagic.com/en/articles/3334936-api-response-codes
     * PUT update a resource
       * [PUT `/api/v3/resources`](./doc/api/resource.md#json-put-update-resource)
     * DELETE destroy a resource
-      * [DELETE `/api/resources/:id`](./doc/api/v1/resource.md#delete-destroy-resource)      
+      * [DELETE `/api/resources/:id`](./doc/api/resource.md#delete-destroy-resource)      
   * [Submission](./doc/api/submission.md)
     * GET all submission authors
       * [GET `/api/v3/submission_authors.(json|xml)`](./doc/api/submission.md#jsonxml-get-all-submission-authors)
