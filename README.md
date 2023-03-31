@@ -32,15 +32,15 @@ https://docs.devicemagic.com/en/articles/3334936-api-response-codes
 
   * [Devices](./doc/api/device.md)
     * GET all organization devices
-      * [GET `/api/v2/organizations/:organization_id/devices.(json|xml)`](./doc/api/devices.md#jsonxml-get-all-organization-devices)
+      * [GET `/api/v2/organizations/:organization_id/devices.(json|xml)`](./doc/api/device.md#jsonxml-get-all-organization-devices)
     * GET organization device
-      * [GET `/api/v2/organizations/:organization_id/devices/:device_id.json`](./doc/api/devices.md#jsonxml-get-organization-device)
+      * [GET `/api/v2/organizations/:organization_id/devices/:device_id.json`](./doc/api/device.md#jsonxml-get-organization-device)
     * POST approving a device
-      * [POST `/api/organizations/[org_id]/devices`](./doc/api/group.md#post-approving-a-device)
+      * [POST `/api/organizations/[org_id]/devices`](./doc/api/device.md#post-approving-a-device)
     * DELETE removing a device
-      * [DELETE `/api/organizations/[org_id]/devices/:device_id`](./doc/api/group.md#delete-removing-a-device)      
+      * [DELETE `/api/organizations/[org_id]/devices/:device_id`](./doc/api/devices.md#delete-removing-a-device)      
     * PUT update device
-      * [PUT `/api/organizations/[org_id]/devices/:device_id`](./doc/api/group.md#jsonxml-put-update-device)
+      * [PUT `/api/organizations/[org_id]/devices/:device_id`](./doc/api/devices.md#jsonxml-put-update-device)
   * [Dispatch](./doc/api/dispatch.md)
     * GET all dispatch authors
       * [GET `/api/v3/dispatch_authors.(json|xml)`](./doc/api/dispatch.md#jsonxml-get-all-dispatch-authors)
