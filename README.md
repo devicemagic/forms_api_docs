@@ -34,7 +34,13 @@ https://docs.devicemagic.com/en/articles/3334936-api-response-codes
     * GET all organization devices
       * [GET `/api/v2/organizations/:organization_id/devices.(json|xml)`](./doc/api/devices.md#jsonxml-get-all-organization-devices)
     * GET organization device
-      * [GET `/api/v2/organizations/:organization_id/devices/:id.json`](./doc/api/devices.md#jsonxml-get-organization-device)
+      * [GET `/api/v2/organizations/:organization_id/devices/:device_id.json`](./doc/api/devices.md#jsonxml-get-organization-device)
+    * POST approving a device
+      * [POST `/api/organizations/[org_id]/devices`](./doc/api/group.md#post-approving-a-device)
+    * DELETE removing a device
+      * [DELETE `/api/organizations/[org_id]/devices/:device_id`](./doc/api/group.md#delete-removing-a-device)      
+    * PUT update device
+      * [PUT `/api/organizations/[org_id]/devices/:device_id`](./doc/api/group.md#jsonxml-put-update-device)
   * [Dispatch](./doc/api/dispatch.md)
     * GET all dispatch authors
       * [GET `/api/v3/dispatch_authors.(json|xml)`](./doc/api/dispatch.md#jsonxml-get-all-dispatch-authors)
@@ -62,23 +68,23 @@ https://docs.devicemagic.com/en/articles/3334936-api-response-codes
     * POST create a group
       * [POST `/api/organizations/[org_id]/groups`](./doc/api/group.md#jsonxml-post-create-group)
     * PUT update a group
-      * [PUT `/api/organizations/[org_id]/groups/:id`](./doc/api/group.md#jsonxml-put-update-group)
+      * [PUT `/api/organizations/[org_id]/groups/:group_id`](./doc/api/group.md#jsonxml-put-update-group)
     * DELETE destroy a group
-      * [DELETE `/api/organizations/[org_id]/groups/:id`](./doc/api/group.md#delete-destroy-group)      
+      * [DELETE `/api/organizations/[org_id]/groups/:group_id`](./doc/api/group.md#delete-destroy-group)      
 
   * [Resource](./doc/api/resource.md)
     * GET index resources
       * [GET `/api/resources`](./doc/api/resource.md#jsonxml-get-index-resources)
     * GET download a resource
-      * [GET `/api/resources/:id`](./doc/api/resource.md#get-download-resource)
+      * [GET `/api/resources/:resource_id`](./doc/api/resource.md#get-download-resource)
     * GET describe a resource
-      * [GET `/api/v3/resources/describe`](./doc/api/resource.md#jsonxml-get-describe-resource)
+      * [GET `/api/v3/resources/:resource_id/describe`](./doc/api/resource.md#jsonxml-get-describe-resource)
     * POST create a resource
       * [POST `/api/v3/resources`](./doc/api/resource.md#json-post-create-resource)
     * PUT update a resource
-      * [PUT `/api/v3/resources`](./doc/api/resource.md#json-put-update-resource)
+      * [PUT `/api/v3/resources/:resource_id`](./doc/api/resource.md#json-put-update-resource)
     * DELETE destroy a resource
-      * [DELETE `/api/resources/:id`](./doc/api/resource.md#delete-destroy-resource)      
+      * [DELETE `/api/resources/:resource_id`](./doc/api/resource.md#delete-destroy-resource)      
   * [Submission](./doc/api/submission.md)
     * GET all submission authors
       * [GET `/api/v3/submission_authors.(json|xml)`](./doc/api/submission.md#jsonxml-get-all-submission-authors)

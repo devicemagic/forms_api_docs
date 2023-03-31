@@ -12,13 +12,6 @@ Key | Type | Description
 --- | --- | ---
 :organization_id | integer | Unique identifier of your oganization
 
-**example:**
-
-```
-curl -u your_api_token:x \
-https://api.devicemagic.com/api/v2/organizations/7/devices.json
-```
-The above request, with `api_token` in the `Authorization` header, will return a list of all devices belonging to organization with id `7`.
 
 ### Example JSON response:
 
@@ -136,7 +129,7 @@ Key | Type | Description
 
 ## JSON|XML GET organization device
 
-* GET `/api/v2/organizations/:organization_id/devices/:id.(json|xml)`
+* GET `/api/v2/organizations/:organization_id/devices/:device_id.(json|xml)`
 
 Returns a `JSON` or `XML` representation of a **device** object
 
@@ -145,15 +138,8 @@ Returns a `JSON` or `XML` representation of a **device** object
 Key | Type | Description
 --- | --- | ---
 :organization_id | integer | Unique identifier of your oganization
-:id | integer | Unique id of the device 
+:device_id | integer | Unique id of the device 
 
-**example:**
-
-```
-curl -u your_api_token:x \
-https://api.devicemagic.com/api/v2/organizations/7/device/4.json
-```
-The above request, with `api_token` in the `Authorization` header, will return a **device** object with id `4` belonging to organization with id `7`.
 
 ### Example JSON response:
 ```
@@ -201,3 +187,77 @@ The above request, with `api_token` in the `Authorization` header, will return a
   </custom_attributes>
 </device>
 ```
+
+---
+
+## POST approving a device
+
+* POST `/api/v2/organizations/:organization_id/devices/:device_id/approve`
+
+
+### URI Parameters
+
+Key | Type | Description
+--- | --- | ---
+:organization_id | integer | Unique identifier of your oganization
+:device_id | integer | Unique id of the device 
+
+---
+
+## DELETE removing a device
+
+* DELETE `/api/v2/organizations/:organization_id/devices/:device_id`
+
+
+### URI Parameters
+
+Key | Type | Description
+--- | --- | ---
+:organization_id | integer | Unique identifier of your oganization
+:device_id | integer | Unique id of the device
+
+---
+
+## JSON|XML PUT update device
+
+* PUT `/organizations/:organization_id/devices/:device_id.(json|xml)` 
+
+Returns a `HTTP 202 accepted` status.
+
+### URI query parameters
+
+Key | Type |  Required | Description
+--- | --- | --- | ---
+:organization_id | integer | Unique identifier of your oganization
+:device_id | integer | true | id of the device to update
+
+
+**Example JSON PUT Request Body:**
+
+```json
+{  
+    "device":{  
+        "owner":"Andy Warhol",
+        "description":"Eight Elvises",
+        "groups":"Default,Unpublished",
+        "custom_attributes":{
+            "city": "Anchorage",
+            "region": "Central"
+        }
+    }
+}
+```
+
+**Example XML PUT Request Body:**
+
+```json
+<device>
+    <owner>Andy Warhol</owner>
+    <description>Eight Elvises</description>
+    <groups>Default,Unpublished</groups>
+</device>
+```
+
+If you leave out any elements in the payload, those properties of the device will be left unchanged.
+
+When you specify groups, provide a comma-separated list of group names. Please don’t include spaces unless they’re actually part of the group name.

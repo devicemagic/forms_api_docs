@@ -48,7 +48,7 @@ Returns a resource.
 
 ## GET download resource
 
-* GET `https://api.devicemagic.com/api/resources/:id` 
+* GET `https://api.devicemagic.com/api/resources/:resource_id` 
 
 Returns a resource.
 
@@ -56,7 +56,7 @@ Returns a resource.
 
 Key | Type |  Required | Description
 --- | --- | --- | ---
-id | integer | true | id of the 
+:resource_id | integer | true | id of the 
 
 Returns the contesnts of the resource
 
@@ -72,7 +72,7 @@ Returns a resource.
 
 Key | Type |  Required | Description
 --- | --- | --- | ---
-resource_id | integer | true | id of the resource
+:resource_id | integer | true | id of the resource
 
 **Example JSON response body:**
 
@@ -191,7 +191,7 @@ Returns a `HTTP 202 accepted` status.
 
 Key | Type |  Required | Description
 --- | --- | --- | ---
-resource_id | integer | true | id of the resource
+:resource_id | integer | true | id of the resource
 
 ### JSON resource parameters
 
@@ -240,13 +240,13 @@ will be empty.
 
 ## DELETE destroy resource
 
-* DELETE `https://api.devicemagic.com/api/resources/:id` 
+* DELETE `https://api.devicemagic.com/api/resources/:resource_id` 
 
 ### URI query parameters
 
 Key | Type |  Required | Description
 --- | --- | --- | ---
-id | integer | true | id of the 
+:resource_id | integer | true | id of the 
 
 **Example request:**
 

@@ -10,7 +10,7 @@ Returns a `JSON` object with a `groups` key containing an `Array` of **group** o
 
 Key | Type | Description
 --- | --- | ---
-organization_id | integer | Unique identifier of your oganization
+:organization_id | integer | Unique identifier of your oganization
 
 ### Query Parameters
 
@@ -132,7 +132,7 @@ Returns a `HTTP 202 accepted` status.
 
 Key | Type | Description
 --- | --- | ---
-organization_id | integer | Unique identifier of your oganization
+:organization_id | integer | Unique identifier of your oganization
 
 **Example JSON POST Request Body:**
 
@@ -165,14 +165,14 @@ Returns a `HTTP 202 accepted` status.
 
 Key | Type |  Required | Description
 --- | --- | --- | ---
-organization_id | integer | Unique identifier of your oganization
-group_id | integer | true | id of the group to update
+:organization_id | integer | Unique identifier of your oganization
+:group_id | integer | true | id of the group to update
 
 You can update the name, form_ids and device_ids.
 If you do not want to update an attribute, just leave it out.
 
 
-**Example JSON POST Request Body:**
+**Example JSON PUT Request Body:**
 
 ```json
 {
@@ -184,7 +184,7 @@ If you do not want to update an attribute, just leave it out.
 }
 ```
 
-**Example XML POST Request Body:**
+**Example XML PUT Request Body:**
 
 ```json
 <group>
@@ -213,7 +213,7 @@ If there was an error while updating, the server will respond with a 400 Bad Req
 
 Key | Type |  Required | Description
 --- | --- | --- | ---
-organization_id | integer | Unique identifier of your oganization
-group_id | integer | true | id of the group to delete
+:organization_id | integer | Unique identifier of your oganization
+:group_id | integer | true | id of the group to delete
 
 Returns a `HTTP 202 accepted` if the delete succeeded, and an HTTP error response otherwise.
