@@ -10,7 +10,7 @@ Returns a `JSON` object with a `groups` key containing an `Array` of **group** o
 
 Key | Type | Description
 --- | --- | ---
-:organization_id | integer | Unique identifier of your oganization
+organization_id | integer | Unique identifier of your oganization
 
 ### Query Parameters
 
@@ -25,12 +25,10 @@ page | integer | Allow the client to request specific page for item results. Def
 **example:**
 
 ```
-curl -u your_api_token:x \
 https://api.devicemagic.com/api/v2/organizations/7/groups.json?filter=Def&tags[]=health&tags[]=food&page=1
 ```
-The above request, with `api_token` in the `Authorization` header, will return a list of all groups belonging to organization with id `7`.
 
-### Example response:
+### Example JSON response:
 
 ```json
 {
@@ -121,3 +119,101 @@ name | string | Name of the group
  Type | Description
  --- | ---
  string | Names of the tags this group has
+
+---
+
+## JSON|XML POST create group
+
+* POST `/organizations/:organization_id/groups.(json|xml)` 
+
+Returns a `HTTP 202 accepted` status.
+
+### JSON group parameters
+
+Key | Type | Description
+--- | --- | ---
+organization_id | integer | Unique identifier of your oganization
+
+**Example JSON POST Request Body:**
+
+```json
+[ "A First Group", "A Second Group" ]
+```
+
+**Example XML POST Request Body:**
+
+```json
+<groups>
+    <group>
+        <name>A First Group</name>
+    </group>
+    <group>
+        <name>A Second Group</name>
+    </group>
+</groups>
+```
+
+---
+
+## JSON PUT update group
+
+* PUT `/organizations/:organization_id/groups/:group_id.(json|xml)` 
+
+Returns a `HTTP 202 accepted` status.
+
+### URI query parameters
+
+Key | Type |  Required | Description
+--- | --- | --- | ---
+organization_id | integer | Unique identifier of your oganization
+group_id | integer | true | id of the group to update
+
+You can update the name, form_ids and device_ids.
+If you do not want to update an attribute, just leave it out.
+
+
+**Example JSON POST Request Body:**
+
+```json
+{
+  "group": {
+    "name": "An updated group name",
+    "form_ids": [1,2],
+    "device_ids": [4,5,12]
+  }
+}
+```
+
+**Example XML POST Request Body:**
+
+```json
+<group>
+  <name>An updated group name</name>
+  <form_ids>
+    <form_id>1</form_id>
+    <form_id>2</form_id>
+  </form_ids>
+  <device_ids>
+    <device_id>4</device_id>
+    <device_id>5</device_id>
+    <device_id>12</device_id>
+  </device_ids>
+</group>
+```
+If your group was updated, the server will respond with a 200 OK.
+If there was an error while updating, the server will respond with a 400 Bad Request and an error message in the body.
+
+---
+
+## DELETE destroy group
+
+* DELETE `/organizations/:organization_id/groups/:group_id` 
+
+### URI query parameters
+
+Key | Type |  Required | Description
+--- | --- | --- | ---
+organization_id | integer | Unique identifier of your oganization
+group_id | integer | true | id of the group to delete
+
+Returns a `HTTP 202 accepted` if the delete succeeded, and an HTTP error response otherwise.

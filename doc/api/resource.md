@@ -6,22 +6,6 @@
 
 Returns a resource.
 
-**Example JSON request:**
-
-```
-curl -u your_api_token:x \
-https://api.devicemagic.com/api/resources.json
-```
-
-**Example XML request:**
-
-```
-curl -u your_api_token:x \
-https://api.devicemagic.com/api/resources.xml
-```
-
-The above request, with `your_api_token` in the `Authorization` header
-
 **Example JSON response body:**
 
 ```json
@@ -74,15 +58,6 @@ Key | Type |  Required | Description
 --- | --- | --- | ---
 id | integer | true | id of the 
 
-**Example request:**
-
-```
-curl -u your_api_token:x \
-https://api.devicemagic.com/api/resources/123
-```
-
-The above request, with `your_api_token` in the `Authorization` header
-
 Returns the contesnts of the resource
 
 ---
@@ -98,22 +73,6 @@ Returns a resource.
 Key | Type |  Required | Description
 --- | --- | --- | ---
 resource_id | integer | true | id of the resource
-
-**Example JSON request:**
-
-```
-curl -u your_api_token:x \
-https://api.devicemagic.com/api/v3/resources/123/describe.json
-```
-
-**Example XML request:**
-
-```
-curl -u your_api_token:x \
-https://api.devicemagic.com/api/v3/resources/123/describe.xml
-```
-
-The above request, with `your_api_token` in the `Authorization` header
 
 **Example JSON response body:**
 
@@ -203,15 +162,19 @@ file_name | string | The name of the file
 file_data  | binary | Base64 encoded file data
 content_type | string | See supported [`mime types`](./resource.md#suported-mime-types) below
 
-**Example request:**
+**Example JSON POST Request Body:**
 
 ```json
-curl \
-  -u your_api_token:x \
-  -X POST \
-  -d \
-{"resource": {"description": "r3","file": {"file_name": "R2_D3.jpg","file_data": "TWFuIGlzIGRpc3Rpbmd1aXNoZWQsIG5vdC...","content_type": "image/jpeg"}}} \
-  https://api.devicemagic.com/api/v3/resources.json
+{
+    "resource": {
+        "description": "r3",
+        "file": {
+            "file_name": "R2_D3.jpg",
+            "file_data": "TWFuIGlzIGRpc3Rpbmd1aXNoZWQsIG5vdC...",
+            "content_type": "image/jpeg"
+        }
+    }
+}
 ```
 The above request, with `your_api_token` in the `Authorization` header, will return a `HTTP 202 Accepted` status, response body 
 will be empty.
@@ -245,15 +208,19 @@ file_name | string | The name of the file
 file_data  | binary | Base64 encoded file data
 content_type | string | See supported [`mime types`](./resource.md#suported-mime-types) below
 
-**Example request:**
+**Example JSON PUT Request Body:**
 
 ```json
-curl \
-  -u your_api_token:x \
-  -X PUT \
-  -d \
-{"resource": {"description": "r3","file": {"file_name": "R2_D3.jpg","file_data": "TWFuIGlzIGRpc3Rpbmd1aXNoZWQsIG5vdC...","content_type": "image/jpeg"}}} \
-  https://api.devicemagic.com/api/v3/resources/123.json
+{
+    "resource": {
+        "description": "r3",
+        "file": {
+            "file_name": "R2_D2_2.jpg",
+            "file_data": "TWFuIGlzIGRpc3Rpbmd1aXNoZWQsIG5vdC...",
+            "content_type": "image/jpeg"
+        }
+    }
+}
 ```
 The above request, with `your_api_token` in the `Authorization` header, will return a `HTTP 202 Accepted` status, response body 
 will be empty.
@@ -273,9 +240,7 @@ will be empty.
 
 ## DELETE destroy resource
 
-* GET `https://api.devicemagic.com/api/resources/:id` 
-
-Returns a resource.
+* DELETE `https://api.devicemagic.com/api/resources/:id` 
 
 ### URI query parameters
 
@@ -284,12 +249,6 @@ Key | Type |  Required | Description
 id | integer | true | id of the 
 
 **Example request:**
-
-```
-curl -u your_api_token:x \
--X DELETE \
-https://api.devicemagic.com/api/resources/123
-```
 
 The above request, with `your_api_token` in the `Authorization` header
 

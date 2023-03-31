@@ -59,6 +59,13 @@ https://docs.devicemagic.com/en/articles/3334936-api-response-codes
   * [Groups](./doc/api/group.md)
     * GET all organization groups
       * [GET `/api/v2/organizations/:organization_id/groups.(json|xml)`](./doc/api/groups.md#jsonxml-get-all-organization-groups)
+    * POST create a group
+      * [POST `/api/organizations/[org_id]/groups`](./doc/api/group.md#jsonxml-post-create-group)
+    * PUT update a group
+      * [PUT `/api/organizations/[org_id]/groups/:id`](./doc/api/group.md#jsonxml-put-update-group)
+    * DELETE destroy a group
+      * [DELETE `/api/organizations/[org_id]/groups/:id`](./doc/api/group.md#delete-destroy-group)      
+
   * [Resource](./doc/api/resource.md)
     * GET index resources
       * [GET `/api/resources`](./doc/api/resource.md#jsonxml-get-index-resources)
