@@ -1,4 +1,6 @@
-# JSON|XML GET all organization groups 
+# Group API
+
+## JSON|XML GET all organization groups 
 
 * GET `/api/v2/organizations/:organization_id/groups.(json|xml)` 
 

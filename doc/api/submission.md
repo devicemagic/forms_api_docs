@@ -1,4 +1,4 @@
-# Submissions API v3
+# Submissions API
 
 
 ## JSON|XML GET all submission authors

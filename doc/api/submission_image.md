@@ -1,4 +1,4 @@
-# Submissions Image API v3
+# Submissions Image API
 
 
 ## POST create submission Image for a device

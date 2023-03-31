@@ -1,4 +1,6 @@
-# JSON|XML GET all organization devices 
+# Devices API
+
+## JSON|XML GET all organization devices 
 
 * GET `/api/v2/organizations/:organization_id/devices.(json|xml)` 
 
@@ -132,7 +134,7 @@ Key | Type | Description
 
 ---
 
-# JSON|XML GET organization device
+## JSON|XML GET organization device
 
 * GET `/api/v2/organizations/:organization_id/devices/:id.(json|xml)`
 
