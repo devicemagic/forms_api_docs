@@ -38,9 +38,9 @@ https://docs.devicemagic.com/en/articles/3334936-api-response-codes
     * POST approving a device
       * [POST `/api/organizations/[org_id]/devices`](./doc/api/device.md#post-approving-a-device)
     * DELETE removing a device
-      * [DELETE `/api/organizations/[org_id]/devices/:device_id`](./doc/api/devices.md#delete-removing-a-device)      
+      * [DELETE `/api/organizations/[org_id]/devices/:device_id`](./doc/api/device.md#delete-removing-a-device)      
     * PUT update device
-      * [PUT `/api/organizations/[org_id]/devices/:device_id`](./doc/api/devices.md#jsonxml-put-update-device)
+      * [PUT `/api/organizations/[org_id]/devices/:device_id`](./doc/api/device.md#jsonxml-put-update-device)
   * [Dispatch](./doc/api/dispatch.md)
     * GET all dispatch authors
       * [GET `/api/v3/dispatch_authors.(json|xml)`](./doc/api/dispatch.md#jsonxml-get-all-dispatch-authors)
