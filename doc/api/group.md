@@ -155,7 +155,7 @@ organization_id | integer | Unique identifier of your oganization
 
 ---
 
-## JSON PUT update group
+## JSON|XML PUT update group
 
 * PUT `/organizations/:organization_id/groups/:group_id.(json|xml)` 
 

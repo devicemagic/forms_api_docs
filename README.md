@@ -58,7 +58,7 @@ https://docs.devicemagic.com/en/articles/3334936-api-response-codes
       * [POST `/api/v3/users/:user/dispatches/destroy_all.json`](./doc/api/dispatch.md#json-post-destroy-all-dispatch-forms-for-a-user)
   * [Groups](./doc/api/group.md)
     * GET all organization groups
-      * [GET `/api/v2/organizations/:organization_id/groups.(json|xml)`](./doc/api/groups.md#jsonxml-get-all-organization-groups)
+      * [GET `/api/v2/organizations/:organization_id/groups.(json|xml)`](./doc/api/group.md#jsonxml-get-all-organization-groups)
     * POST create a group
       * [POST `/api/organizations/[org_id]/groups`](./doc/api/group.md#jsonxml-post-create-group)
     * PUT update a group
