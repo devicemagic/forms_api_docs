@@ -30,9 +30,9 @@ https://docs.devicemagic.com/en/articles/3334936-api-response-codes
 
   * [Devices](./doc/api/v2/devices.md)
     * GET all organization devices
-      * [GET `/api/v2/organizations/:organization_id/devices.(json|xml)`](../doc/api/v2/devices.md#jsonxml-get-all-organization-devices)
+      * [GET `/api/v2/organizations/:organization_id/devices.(json|xml)`](./doc/api/v2/devices.md#jsonxml-get-all-organization-devices)
     * GET organization device
-      * [GET `/api/v2/organizations/:organization_id/devices/:id.json`](../doc/api/v2/devices.md#jsonxml-get-organization-device)
+      * [GET `/api/v2/organizations/:organization_id/devices/:id.json`](./doc/api/v2/devices.md#jsonxml-get-organization-device)
   * [Dispatch](./doc/api/v3/dispatch.md)
     * GET all dispatch authors
       * [GET `/api/v3/dispatch_authors.(json|xml)`](./doc/api/v3/dispatch.md#jsonxml-get-all-dispatch-authors)
