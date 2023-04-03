@@ -57,8 +57,9 @@ https://docs.devicemagic.com/en/articles/3334936-api-response-codes
     * PATCH update a dispatch form for a device or user
       * [PATCH `/api/v3/devices/:device_identifier/dispatches/:dispatch_id.json`](./doc/api/dispatch.md#jsonxml-patch-update-dispatch-form-for-a-device)
       * [PATCH `/api/v3/users/:user/dispatches/:dispatch_id.json`](./doc/api/dispatch.md#jsonxml-patch-update-dispatch-form-for-a-user)
-    * DELETE destroy dispatch
-      * [DELETE `/api/v3/dispatchs/:dispatch_id.json`](./doc/api/dispatch.md#json-delete-destroy-dispatch)
+    * DELETE destroy dispatch for a device or user
+      * [DELETE `/api/v3/dispatchs/:dispatch_id.json`](./doc/api/dispatch.md#json-delete-dispatch-form-for-device)
+      * [DELETE `/api/v3/dispatchs/:user_id.json`](./doc/api/dispatch.md#json-delete-dispatch-form-for-user)
     * POST destroy all dispatch forms for a device or user
       * [POST `/api/v3/devices/:device_identifier/dispatches/destroy_all.json`](./doc/api/dispatch.md#json-post-destroy-all-dispatch-forms-for-a-device)
       * [POST `/api/v3/users/:user/dispatches/destroy_all.json`](./doc/api/dispatch.md#json-post-destroy-all-dispatch-forms-for-a-user)

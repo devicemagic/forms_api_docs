@@ -275,7 +275,7 @@ Returns the xml of the dispatch originally submitted by the mobile device.
 
 Key | Type | Description
 --- | --- | ---
-dispatch_id | integer |  The dispatch ID of the dispatch
+:dispatch_id | integer |  The dispatch ID of the dispatch
 include_inputs | boolean | Optional. A flag to include the field data for the dispatch 
 
 **Example JSON response body:**
@@ -486,7 +486,7 @@ Returns a `HTTP 202 accepted` status.
 ```
 ---
 
-# JSON DELETE Dispatch form for device
+## JSON DELETE Dispatch form for device
 
 * DELETE `/api/v3/devices/:device_identifier/dispatches/:id.json` 
 
@@ -501,7 +501,7 @@ Key | Type | Description
 
 ---
 
-# JSON DELETE Dispatch form for user
+## JSON DELETE Dispatch form for user
 
 * DELETE `/api/v3/users/:user_id/dispatches/:id.json` 
 
