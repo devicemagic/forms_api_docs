@@ -28,7 +28,7 @@ https://docs.devicemagic.com/en/articles/3334936-api-response-codes
 
 ## Endpoints
 
-  * [Destinations](./doc/api/destination.md)
+  * [Destination](./doc/api/destination.md)
     * GET View Destinations on a Form
       * [GET `/api/forms/:form_id/destinations.json`](./doc/api/destination.md#json-get-view-destinations-on-a-form)
     * GET View Destination details
@@ -39,7 +39,7 @@ https://docs.devicemagic.com/en/articles/3334936-api-response-codes
       * [PUT `/api/forms/:form_id/destinations/:destination_id.json`](./doc/api/destination.md#json-put-update-a-destination)
     * DELETE Destroying a Destination
       * [DELETE `/api/forms/:form_id/destinations/:destination_id.json`](./doc/api/destination.md#delete-destroying-a-destination)
-  * [Devices](./doc/api/device.md)
+  * [Device](./doc/api/device.md)
     * GET all organization devices
       * [GET `/api/v2/organizations/:organization_id/devices.(json|xml)`](./doc/api/device.md#jsonxml-get-all-organization-devices)
     * GET organization device
@@ -72,7 +72,9 @@ https://docs.devicemagic.com/en/articles/3334936-api-response-codes
     * POST destroy all dispatch forms for a device or user
       * [POST `/api/v3/devices/:device_identifier/dispatches/destroy_all.json`](./doc/api/dispatch.md#json-post-destroy-all-dispatch-forms-for-a-device)
       * [POST `/api/v3/users/:user/dispatches/destroy_all.json`](./doc/api/dispatch.md#json-post-destroy-all-dispatch-forms-for-a-user)
-  * [Groups](./doc/api/group.md)
+  * [Form](./doc/api/form.md)
+
+  * [Group](./doc/api/group.md)
     * GET all organization groups
       * [GET `/api/v2/organizations/:organization_id/groups.(json|xml)`](./doc/api/group.md#jsonxml-get-all-organization-groups)
     * POST create a group
@@ -82,8 +84,8 @@ https://docs.devicemagic.com/en/articles/3334936-api-response-codes
     * DELETE destroy a group
       * [DELETE `/api/organizations/[org_id]/groups/:group_id`](./doc/api/group.md#delete-destroy-group)      
   * [Resource](./doc/api/resource.md)
-    * GET index resources
-      * [GET `/api/resources`](./doc/api/resource.md#jsonxml-get-index-resources)
+    * GET list resources
+      * [GET `/api/resources`](./doc/api/resource.md#jsonxml-get-list-resources)
     * GET download a resource
       * [GET `/api/resources/:resource_id`](./doc/api/resource.md#get-download-resource)
     * GET describe a resource
@@ -104,7 +106,7 @@ https://docs.devicemagic.com/en/articles/3334936-api-response-codes
     * POST create submission from a form for a device or user
       * [POST `/api/v3/devices/:device_identifier/submissions.json`](./doc/api/submission.md#json-post-create-submission-from-a-form-for-a-device)
       * [POST `/api/v3/users/:user/submissions.json`](./doc/api/submission.md#json-post-create-submission-from-a-form-for-a-user)
-  * [Submission Images](./doc/api/submission_image.md)
+  * [Submission Image](./doc/api/submission_image.md)
     * POST create submission image  
       * [POST `/api/v3/devices/:device_identifier/submissions_image`](./doc/api/submission_image.md#post-create-submission-image-for-a-device)
       * [POST `/api/v3/devices/:user/submissions_image`](./doc/api/submission_image.md#post-create-submission-image-for-a-user)

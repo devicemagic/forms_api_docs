@@ -14,8 +14,6 @@ Key | Type | Description
 items | integer |  Allow the client to request a custom number of items per page. Defaults to 100
 page | integer | Allow the client to request specific page for item results. Defaults to 1
 
-The above request, with `your_api_token` in the `Authorization` header, will return a success status and all Authors with webform access
-
 **Example JSON response body:**
 
 ```json

@@ -1,6 +1,6 @@
 # Resources API
 
-## JSON|XML GET index resources
+## JSON|XML GET list resources
 
 * GET `/api/v3/resources.(json|xml)` 
 
@@ -176,8 +176,6 @@ content_type | string | See supported [`mime types`](./resource.md#suported-mime
     }
 }
 ```
-The above request, with `your_api_token` in the `Authorization` header, will return a `HTTP 202 Accepted` status, response body 
-will be empty.
 
 ---
 
@@ -222,8 +220,6 @@ content_type | string | See supported [`mime types`](./resource.md#suported-mime
     }
 }
 ```
-The above request, with `your_api_token` in the `Authorization` header, will return a `HTTP 202 Accepted` status, response body 
-will be empty.
 
 ## Suported MIME types: ##
 * image/png
@@ -247,9 +243,5 @@ will be empty.
 Key | Type |  Required | Description
 --- | --- | --- | ---
 :resource_id | integer | true | id of the 
-
-**Example request:**
-
-The above request, with `your_api_token` in the `Authorization` header
 
 Returns a `HTTP 202 accepted` if the delete succeeded, and an HTTP error response otherwise.
