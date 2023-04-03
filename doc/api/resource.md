@@ -4,7 +4,7 @@
 
 * GET `/api/v3/resources.(json|xml)` 
 
-Returns a resource.
+Returns a list of resources.
 
 **Example JSON response body:**
 
@@ -66,7 +66,7 @@ Returns the contesnts of the resource
 
 * GET `/api/v3/resources/:resource_id/describe.(json|xml)` 
 
-Returns a resource.
+Returns a resource description.
 
 ### URI query parameters
 
