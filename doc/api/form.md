@@ -55,7 +55,7 @@ Key | Type | Description
 ```
 ---
 
-## GET Form Definition
+## JSON|XML GET Form Definition
 
 * GET `/organizations/:organization_id/forms/:form_id.(xml|json)` 
 
@@ -64,7 +64,7 @@ Returns a form.
 ### URI query parameters
 
 Key | Type | Description
---- | --- | --- | ---
+--- | --- | ---
 :organization_id | integer | Unique identifier of your oganization
 :form_id | integer | id of the 
 version | integer | (Optional) the verion of the form definition
@@ -114,7 +114,7 @@ Returns the contesnts of the form
 ```
 ---
 
-## JSON POST create form
+## JSON|XML POST create form
 
 * POST `/organizations/:organization_id/forms.(xml|json)`  
 
@@ -202,7 +202,7 @@ Key | Type | Description
 
 ---
 
-## JSON PUT update form
+## JSON|XML PUT update form
 
 * PUT `/organizations/:organization_id/forms/:form_id.(xml|json)` 
 
@@ -211,7 +211,7 @@ Returns a `HTTP 202` status.
 ### URI query parameters
 
 Key | Type | Description
---- | --- | --- | ---
+--- | --- | ---
 :organization_id | integer | Unique identifier of your oganization
 :form_id | integer | id of the 
 
@@ -302,13 +302,13 @@ You’ll receive a 200 OK if the delete succeeded.
 ### URI query parameters
 
 Key | Type | Description
---- | --- | --- | ---
+--- | --- | ---
 :organization_id | integer | Unique identifier of your oganization
 :form_id | integer | id of the 
 
 ---
 
-## POST Updating a Form’s Group
+## JSON|XML POST Updating a Form’s Group
 
 * POST `/organizations/:organization_id/forms/:form_id/properties.(xml|json)` 
 
@@ -317,7 +317,7 @@ On success you’ll receive a 200 OK. If the request fails, check the response h
 ### URI query parameters
 
 Key | Type | Description
---- | --- | --- | ---
+--- | --- | ---
 :organization_id | integer | Unique identifier of your oganization
 :form_id | integer | id of the 
 
@@ -351,7 +351,7 @@ On success you’ll receive a 200 OK. If the request fails, check the response h
 ### URI query parameters
 
 Key | Type | Description
---- | --- | --- | ---
+--- | --- | ---
 :form_id | integer | id of the 
 
 ---
@@ -365,5 +365,5 @@ On success you’ll receive a 200 OK. If the request fails, check the response h
 ### URI query parameters
 
 Key | Type | Description
---- | --- | --- | ---
+--- | --- | ---
 :form_id | integer | id of the 

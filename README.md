@@ -73,7 +73,22 @@ https://docs.devicemagic.com/en/articles/3334936-api-response-codes
       * [POST `/api/v3/devices/:device_identifier/dispatches/destroy_all.json`](./doc/api/dispatch.md#json-post-destroy-all-dispatch-forms-for-a-device)
       * [POST `/api/v3/users/:user/dispatches/destroy_all.json`](./doc/api/dispatch.md#json-post-destroy-all-dispatch-forms-for-a-user)
   * [Form](./doc/api/form.md)
-
+    * GET list forms
+      * [GET `/organizations/:organization_id/forms.(xml|json)`](./doc/api/form.md#jsonxml-get-list-forms)
+    * GET Form Definition
+      * [GET `/organizations/:organization_id/forms/:form_id.(xml|json)`](./doc/api/form.md#jsonxml-get-form-definition)
+    * POST create form
+      * [POST `/organizations/:organization_id/forms.(xml|json)`](./doc/api/form.md#jsonxml-post-create-form)
+    * PUT update form
+      * [PUT `/organizations/:organization_id/forms/:form_id.(xml|json)`](./doc/api/form.md#jsonxml-put-update-form)
+    * DELETE destroy form
+      * [DELETE `/organizations/:organization_id/forms/:form_id`](./doc/api/form.md#delete-destroy-form)
+    * POST Updating a Form’s Group
+      * [POST `/organizations/:organization_id/forms/:form_id/properties.(xml|json)`](./doc/api/form.md#jsonxml-post-updating-a-forms-group)
+    * PUT Locking a form
+      * [PUT `api/v3/forms/:form_id/lock`](./doc/api/form.md#put-locking-a-form)
+    * PUT Unocking a form
+      * [PUT `api/v3/forms/:form_id/unlock`](./doc/api/form.md#put-unocking-a-form)
   * [Group](./doc/api/group.md)
     * GET all organization groups
       * [GET `/api/v2/organizations/:organization_id/groups.(json|xml)`](./doc/api/group.md#jsonxml-get-all-organization-groups)
