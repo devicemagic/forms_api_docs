@@ -39,7 +39,6 @@ https://docs.devicemagic.com/en/articles/3334936-api-response-codes
       * [PUT `/api/forms/:form_id/destinations/:destination_id.json`](./doc/api/destination.md#json-put-update-a-destination)
     * DELETE Destroying a Destination
       * [DELETE `/api/forms/:form_id/destinations/:destination_id.json`](./doc/api/destination.md#delete-destroying-a-destination)
-
   * [Devices](./doc/api/device.md)
     * GET all organization devices
       * [GET `/api/v2/organizations/:organization_id/devices.(json|xml)`](./doc/api/device.md#jsonxml-get-all-organization-devices)
@@ -82,7 +81,6 @@ https://docs.devicemagic.com/en/articles/3334936-api-response-codes
       * [PUT `/api/organizations/[org_id]/groups/:group_id`](./doc/api/group.md#jsonxml-put-update-group)
     * DELETE destroy a group
       * [DELETE `/api/organizations/[org_id]/groups/:group_id`](./doc/api/group.md#delete-destroy-group)      
-
   * [Resource](./doc/api/resource.md)
     * GET index resources
       * [GET `/api/resources`](./doc/api/resource.md#jsonxml-get-index-resources)
@@ -97,10 +95,12 @@ https://docs.devicemagic.com/en/articles/3334936-api-response-codes
     * DELETE destroy a resource
       * [DELETE `/api/resources/:resource_id`](./doc/api/resource.md#delete-destroy-resource)      
   * [Submission](./doc/api/submission.md)
+    * GET view submissions in Device Magic Database
+      * [GET `/api/forms/:form_id/device_magic_database.json`](./doc/api/submission.md#json-get-view-submissions-in-device-magic-database)
     * GET all submission authors
       * [GET `/api/v3/submission_authors.(json|xml)`](./doc/api/submission.md#jsonxml-get-all-submission-authors)
-    * GET submission xml
-      * [GET `/api/v3/submissions/:user_id`](./doc/api/submission.md#xml-get-submission-xml)
+    * GET original submission xml
+      * [GET `/api/v3/submissions/:user_id`](./doc/api/submission.md#xml-get-original-submission-xml)
     * POST create submission from a form for a device or user
       * [POST `/api/v3/devices/:device_identifier/submissions.json`](./doc/api/submission.md#json-post-create-submission-from-a-form-for-a-device)
       * [POST `/api/v3/users/:user/submissions.json`](./doc/api/submission.md#json-post-create-submission-from-a-form-for-a-user)

@@ -1,5 +1,339 @@
 # Submissions API
 
+## JSON GET view submissions in Device Magic Database
+
+* GET `api/forms/:form_id/device_magic_database.json` 
+
+**Note**: Your form's Device Magic Database Destination needs to be active and have submissions in it, in order to view these submissions using the API.
+
+### URI query parameters
+
+Key | Type | Description
+--- | --- | ---
+:form_id | integer |  Unique identifier of the form
+page | integer | Allow the client to request specific page for item results. Defaults to 1
+per_page | integer |  Allow the client to request a custom number of items per page. Defaults to 30
+from_date | date | Submissions made after date
+to_date | date | Submissions made before date
+submission_ids | list of strings | Comma seperated list of submission ids (note: ids not submission identifiers)
+device_id | string | A device identifier to filter by
+search | string | A free text search that matches against the text in the submission
+
+**Example JSON response body:**
+
+```json
+{
+  "per_page": 5,
+  "current_page": 1,
+  "total_pages": 2,
+  "current_count": 5,
+  "total_count": 7,
+  "submissions": [{
+    "form": {
+      "id": 441,
+      "name": "Simple Test Form",
+      "version": "1.00"
+    },
+    "metadata": {
+      "device_id": {
+        "value": "iPhone_1",
+        "type": "string"
+      },
+      "user_id": {
+        "value": null,
+        "type": "string"
+      },
+      "username": {
+        "value": "Matty6s",
+        "type": "string"
+      },
+      "submitted_at": {
+        "value": "2016-05-04 11:25:49 +02:00",
+        "type": "datetime"
+      },
+      "received_at": {
+        "value": "2016-05-04 09:25:49 +00:00",
+        "type": "datetime"
+      },
+      "submission_id": {
+        "value": "233",
+        "type": "integer"
+      },
+      "device_submission_identifier": {
+        "value": "A8F925ED-52E0-4243-AD25-E0EDBB051A3F",
+        "type": "integer"
+      },
+      "form_name": {
+        "value": "Simple Test Form"
+      },
+      "form_namespace": {
+        "value": "https://www.devicemagic.com/xforms/9be7df80-f407-0133-d8cb-14109fd23119"
+      },
+      "form_version": {
+        "value": "1.00"
+      },
+      "device": {
+        "value": {
+          "a": null
+        }
+      }
+    },
+    "submission": {
+      "Basic_Question": {
+        "value": "Test answer 1",
+        "type": "text"
+      },
+      "Date___Time_Question": {
+        "value": "2016-05-03 09:25:42",
+        "type": "datetime"
+      }
+    }
+  }, {
+    "form": {
+      "id": 441,
+      "name": "Simple Test Form",
+      "version": "1.00"
+    },
+    "metadata": {
+      "device_id": {
+        "value": "iPhone_1",
+        "type": "string"
+      },
+      "user_id": {
+        "value": null,
+        "type": "string"
+      },
+      "username": {
+        "value": "Matty6s",
+        "type": "string"
+      },
+      "submitted_at": {
+        "value": "2016-05-04 11:26:04 +02:00",
+        "type": "datetime"
+      },
+      "received_at": {
+        "value": "2016-05-04 09:26:04 +00:00",
+        "type": "datetime"
+      },
+      "submission_id": {
+        "value": "234",
+        "type": "integer"
+      },
+      "device_submission_identifier": {
+        "value": "74F31AFF-2475-4EB2-A333-7BD43CF6CD93",
+        "type": "integer"
+      },
+      "form_name": {
+        "value": "Simple Test Form"
+      },
+      "form_namespace": {
+        "value": "https://www.devicemagic.com/xforms/9be7df80-f407-0133-d8cb-14109fd23119"
+      },
+      "form_version": {
+        "value": "1.00"
+      },
+      "device": {
+        "value": {
+          "a": null
+        }
+      }
+    },
+    "submission": {
+      "Basic_Question": {
+        "value": "Test answer 2",
+        "type": "text"
+      },
+      "Date___Time_Question": {
+        "value": "2016-05-04 11:25:58",
+        "type": "datetime"
+      }
+    }
+  }, {
+    "form": {
+      "id": 441,
+      "name": "Simple Test Form",
+      "version": "1.00"
+    },
+    "metadata": {
+      "device_id": {
+        "value": "iPhone_1",
+        "type": "string"
+      },
+      "user_id": {
+        "value": null,
+        "type": "string"
+      },
+      "username": {
+        "value": "Matty6s",
+        "type": "string"
+      },
+      "submitted_at": {
+        "value": "2016-05-04 11:26:15 +02:00",
+        "type": "datetime"
+      },
+      "received_at": {
+        "value": "2016-05-04 09:26:16 +00:00",
+        "type": "datetime"
+      },
+      "submission_id": {
+        "value": "235",
+        "type": "integer"
+      },
+      "device_submission_identifier": {
+        "value": "BBEDE777-893E-4075-8D92-A4764BC08953",
+        "type": "integer"
+      },
+      "form_name": {
+        "value": "Simple Test Form"
+      },
+      "form_namespace": {
+        "value": "https://www.devicemagic.com/xforms/9be7df80-f407-0133-d8cb-14109fd23119"
+      },
+      "form_version": {
+        "value": "1.00"
+      },
+      "device": {
+        "value": {
+          "a": null
+        }
+      }
+    },
+    "submission": {
+      "Basic_Question": {
+        "value": "Test answer 3",
+        "type": "text"
+      },
+      "Date___Time_Question": {
+        "value": "2016-05-04 11:26:11",
+        "type": "datetime"
+      }
+    }
+  }, {
+    "form": {
+      "id": 441,
+      "name": "Simple Test Form",
+      "version": "1.00"
+    },
+    "metadata": {
+      "device_id": {
+        "value": "iPhone_1",
+        "type": "string"
+      },
+      "user_id": {
+        "value": null,
+        "type": "string"
+      },
+      "username": {
+        "value": "Matty6s",
+        "type": "string"
+      },
+      "submitted_at": {
+        "value": "2016-05-04 11:26:35 +02:00",
+        "type": "datetime"
+      },
+      "received_at": {
+        "value": "2016-05-04 09:26:35 +00:00",
+        "type": "datetime"
+      },
+      "submission_id": {
+        "value": "236",
+        "type": "integer"
+      },
+      "device_submission_identifier": {
+        "value": "7688475F-1659-4E67-A5BE-915449D104E3",
+        "type": "integer"
+      },
+      "form_name": {
+        "value": "Simple Test Form"
+      },
+      "form_namespace": {
+        "value": "https://www.devicemagic.com/xforms/9be7df80-f407-0133-d8cb-14109fd23119"
+      },
+      "form_version": {
+        "value": "1.00"
+      },
+      "device": {
+        "value": {
+          "a": null
+        }
+      }
+    },
+    "submission": {
+      "Basic_Question": {
+        "value": "Test answer 4",
+        "type": "text"
+      },
+      "Date___Time_Question": {
+        "value": "2016-06-16 02:28:23",
+        "type": "datetime"
+      }
+    }
+  }, {
+    "form": {
+      "id": 441,
+      "name": "Simple Test Form",
+      "version": "1.00"
+    },
+    "metadata": {
+      "device_id": {
+        "value": "iPhone_1",
+        "type": "string"
+      },
+      "user_id": {
+        "value": null,
+        "type": "string"
+      },
+      "username": {
+        "value": "Matty6s",
+        "type": "string"
+      },
+      "submitted_at": {
+        "value": "2016-05-04 11:26:48 +02:00",
+        "type": "datetime"
+      },
+      "received_at": {
+        "value": "2016-05-04 09:26:48 +00:00",
+        "type": "datetime"
+      },
+      "submission_id": {
+        "value": "237",
+        "type": "integer"
+      },
+      "device_submission_identifier": {
+        "value": "9BAD6AA2-1D03-4E74-8962-8BC9FD80C57B",
+        "type": "integer"
+      },
+      "form_name": {
+        "value": "Simple Test Form"
+      },
+      "form_namespace": {
+        "value": "https://www.devicemagic.com/xforms/9be7df80-f407-0133-d8cb-14109fd23119"
+      },
+      "form_version": {
+        "value": "1.00"
+      },
+      "device": {
+        "value": {
+          "a": null
+        }
+      }
+    },
+    "submission": {
+      "Basic_Question": {
+        "value": "Test answer 5",
+        "type": "text"
+      },
+      "Date___Time_Question": {
+        "value": "2016-05-25 10:03:40",
+        "type": "datetime"
+      }
+    }
+  }]
+}
+```
+
+
+---
 
 ## JSON|XML GET all submission authors
 
@@ -80,7 +414,7 @@ email | string | Email address of the author, available when the type is User
 
 
 ---
-## XML GET submission XML
+## XML GET original submission XML
 
 * GET `/api/v3/submissions/:submission_id` 
 
