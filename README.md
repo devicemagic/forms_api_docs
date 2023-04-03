@@ -28,7 +28,17 @@ https://docs.devicemagic.com/en/articles/3334936-api-response-codes
 
 ## Endpoints
 
-  * [Destinations](./doc/api/destinations.md)
+  * [Destinations](./doc/api/destination.md)
+    * GET View Destinations on a Form
+      * [GET `/api/forms/:form_id/destinations.json`](./doc/api/destination.md#json-get-view-destinations-on-a-form)
+    * GET View Destination details
+      * [GET `/api/forms/:form_id/destinations/:destination_id.json`](./doc/api/destination.md#json-get-view-destination-details)
+    * POST create a destination
+      * [POST `/api/forms/:form_id/destinations.json`](./doc/api/destination.md#json-post-create-a-destination)
+    * PUT update a destination
+      * [PUT `/api/forms/:form_id/destinations/:destination_id.json`](./doc/api/destination.md#json-put-update-a-destination)
+    * DELETE Destroying a Destination
+      * [DELETE `/api/forms/:form_id/destinations/:destination_id.json`](./doc/api/destination.md#delete-destroying-a-destination)
 
   * [Devices](./doc/api/device.md)
     * GET all organization devices

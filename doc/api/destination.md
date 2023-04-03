@@ -232,6 +232,7 @@ You do not need to specify the format_selection, transport_selection or binary_t
 ## DELETE Destroying a Destination
 
 * DELETE `/api/forms/:form_id/destinations/:destination_id.json`
+
 You’ll receive a 200 OK if the delete succeeded, and an HTTP error response otherwise.
 
 ### URI query parameters
