@@ -212,13 +212,6 @@ Key | Type | Description
 items | integer |  Allow the client to request a custom number of items per page. Defaults to 100
 page | integer | Allow the client to request specific page for item results. Defaults to 1
 
-**Example request:**
-
-```json
-curl -u your_api_token:x \
-  https://api.devicemagic.com/api/v3/organization_dispatches.json
-```
-
 **Example JSON response body:**
 
 ```json
