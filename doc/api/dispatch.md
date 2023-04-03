@@ -136,7 +136,8 @@ page | integer | Allow the client to request specific page for item results. Def
 ## JSON|XML GET index dispatch forms for a user
 
 * GET `/api/v3/users/:user_id/dispatches.json` 
-Returns an array of **Dispatch** objects assigned to a user
+
+Returns an array of [**Dispatch**](./dispatch.md#dispatch-object) objects assigned to a user
 
 
 ### URI parameters
@@ -152,14 +153,6 @@ Key | Type | Description
 items | integer |  Allow the client to request a custom number of items per page. Defaults to 100
 page | integer | Allow the client to request specific page for item results. Defaults to 1
 
-**Example request:**
-
-```json
-curl -u your_api_token:x \
-  https://api.devicemagic.com/api/v3/users/1234/dispatches.json
-```
-
-The above request, with `your_api_token` in the `Authorization` header, will return a success status and return all Dispatch forms belonging to a user with identifier `1234`
 
 **Example JSON response body:**
 
@@ -210,7 +203,7 @@ The above request, with `your_api_token` in the `Authorization` header, will ret
 
 * GET `/api/v3/organization_dispatches.(json|xml)` 
 
-Returns an array of objects each containing a `dispatches` key with a **Dispatch** object as value.
+Returns an array of objects each containing a `dispatches` key with a [**Dispatch**](./dispatch.md#dispatch-object) object as value.
 
 ### URI query parameters
 
@@ -284,15 +277,6 @@ Key | Type | Description
 --- | --- | ---
 dispatch_id | integer |  The dispatch ID of the dispatch
 include_inputs | boolean | Optional. A flag to include the field data for the dispatch 
-
-**Example request:**
-
-```
-curl \
-  -u your_api_token:x \
-  https://api.devicemagic.com/api/v3/dispatches/123.json
-```
-The above request, with `your_api_token` in the `Authorization` header
 
 **Example JSON response body:**
 
@@ -515,16 +499,6 @@ Key | Type | Description
 :device_identifier | string | Unique string identifier of a device
 :id | integer | Unique id of a Dispatch form
 
-**Example request:**
-
-```
-curl \
-  -u your_api_token:x \
-  -X DELETE \
-  https://api.devicemagic.com/api/v3/devices/Android_123412b-1234-1234-1234-12341234/dispatches/302.json
-```
-The above request, with `your_api_token` in the `Authorization` header, will return a `HTTP 200 OK` status and an empty body afer Dispatch form id `302` belonging to a device with string identifier `Android_123412b-1234-1234-1234-12341234` has been deleted
-
 ---
 
 # JSON DELETE Dispatch form for user
@@ -540,16 +514,6 @@ Key | Type | Description
 :user_id | string | Unique string identifier of a user
 :id | integer | Unique id of a Dispatch form
 
-**Example request:**
-
-```
-curl \
-  -u your_api_token:x \
-  -X DELETE \
-  https://api.devicemagic.com/api/v3/users/1234/dispatches/302.json
-```
-The above request, with `your_api_token` in the `Authorization` header, will return a `HTTP 200 OK` status and an empty body afer Dispatch form id `302` belonging to a device with string identifier `Android_123412b-1234-1234-1234-12341234` has been deleted
-
 ---
 
 ## JSON POST destroy all Dispatch forms for a device
@@ -564,16 +528,6 @@ Key | Type | Description
 --- | --- | ---
 :device_identifier | string | Unique string identifier of a device
 
-**Example request:**
-
-```
-curl \
-  -u your_api_token:x \
-  -X POST \
-  https://api.devicemagic.com/api/v3/devices/Android_123412b-1234-1234-1234-12341234/dispatches/destroy_all.json
-```
-The above request, with `your_api_token` in the `Authorization` header, will return a success status indicating all Dispatch forms belonging to device with string identifier `Android_123412b-1234-1234-1234-12341234` are destroyed.
-
 ---
 
 ## JSON POST destroy all dispatch forms for a user
@@ -587,16 +541,6 @@ Key | Type | Description
 :user_id | string | Unique string identifier of a User
 
 Returns a `HTTP 200 OK` status with an `empty` body, when all Dispatch forms belonging to the device are destroyed.
-
-**Example request:**
-
-```
-curl \
-  -u your_api_token:x \
-  -X POST \
-  https://api.devicemagic.com/api/v3/users/1234/dispatches/destroy_all.json
-```
-The above request, with `your_api_token` in the `Authorization` header, will return a success status indicating all Dispatch forms belonging to user with identifier `1234` are destroyed.
 
 ---
 ## Dispatch object
