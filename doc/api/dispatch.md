@@ -599,7 +599,7 @@ curl \
 The above request, with `your_api_token` in the `Authorization` header, will return a success status indicating all Dispatch forms belonging to user with identifier `1234` are destroyed.
 
 ---
-**Dispatch object**
+## Dispatch object
 
 Key | Type | Description
 --- | --- | ---
