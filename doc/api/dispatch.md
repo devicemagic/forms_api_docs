@@ -256,16 +256,115 @@ page | integer | Allow the client to request specific page for item results. Def
 
 ---
 
-## JSON|XML GET show dispatch
+## JSON|XML GET show dispatch form for a device
 
-* GET `/api/v3/dispatches/:dispatch_id.(json|xml)?include_inputs=false` 
+* GET `/api/v3/devices/:device_identifier/dispatches/:dispatch_id.(json|xml)?include_inputs=false` 
 
-Returns the xml of the dispatch originally submitted by the mobile device.
+Returns the xml of the dispatch.
 
 ### URI parameters
 
 Key | Type | Description
 --- | --- | ---
+:device_identifier | string | Unique string identifier of a device
+:dispatch_id | integer |  The dispatch ID of the dispatch
+include_inputs | boolean | Optional. A flag to include the field data for the dispatch 
+
+**Example JSON response body:**
+
+```json
+{
+  "id": 296,
+  "name": "Test Dispatch form",
+  "namespace": "http://www.devicemagic.com/xforms/1234-123-123?1234-123-123",
+  "version": "1.01",
+  "organization_id": 7,
+  "device_id": 4,
+  "description": "Test Dispatch form description",
+  "parent_form_id": 270,
+  "parent_form_version": "1.02",
+  "created_at": "2020-03-12T14:47:22.000Z",
+  "updated_at": "2020-03-12T14:47:22.000Z",
+  "scheduled_at": "2020-02-10T21:04:40.000Z",
+}
+```
+**Example JSON response body with include_inputs=true:**
+
+```json
+{
+  "id": 296,
+  "name": "Test Dispatch form",
+  "namespace": "http://www.devicemagic.com/xforms/1234-123-123?1234-123-123",
+  "version": "1.01",
+  "organization_id": 7,
+  "device_id": 4,
+  "description": "Test Dispatch form description",
+  "parent_form_id": 270,
+  "parent_form_version": "1.02",
+  "created_at": "2020-03-12T14:47:22.000Z",
+  "updated_at": "2020-03-12T14:47:22.000Z",
+  "scheduled_at": "2020-02-10T21:04:40.000Z",
+  "inputs": {
+    "Question1": "Answer1",
+    "Question2": "Answer2",
+  }
+}
+```
+
+**Example XML response body:**
+
+```xml
+<?xml version="1.0" encoding="UTF-8"?>
+<dispatch>
+  <id type="integer">296</id>
+  <name>Test Dispatch form</name>
+  <namespace>http://www.devicemagic.com/xforms/1234-123-123?1234-123-123</namespace>
+  <version>1.01</version>
+  <organization-id type="integer">7</organization-id>
+  <device-id type="integer">4</device-id>
+  <description>Test Dispatch form description</description>
+  <parent-form-id type="integer">198</parent-form-id>
+  <parent-form-version>1.00</parent-form-version>
+  <created-at type="dateTime">2020-03-13T13:48:58Z</created-at>
+  <scheduled-at type="dateTime">2020-03-13T13:48:56Z</scheduled-at>
+</dispatch>
+```
+**Example XML response body with include_inputs=true:**
+
+```xml
+<?xml version="1.0" encoding="UTF-8"?>
+<dispatch>
+  <id type="integer">296</id>
+  <name>Test Dispatch form</name>
+  <namespace>http://www.devicemagic.com/xforms/1234-123-123?1234-123-123</namespace>
+  <version>1.01</version>
+  <organization-id type="integer">7</organization-id>
+  <device-id type="integer">4</device-id>
+  <description>Test Dispatch form description</description>
+  <parent-form-id type="integer">198</parent-form-id>
+  <parent-form-version>1.00</parent-form-version>
+  <created-at type="dateTime">2020-03-13T13:48:58Z</created-at>
+  <scheduled-at type="dateTime">2020-03-13T13:48:56Z</scheduled-at>
+  <inputs>
+    <Question1>Answer1</Question1>
+    <Question2>Answer2</Question2>
+  </inputs>
+</dispatch>
+```
+
+---
+
+## JSON|XML GET show dispatch form for a user
+
+* GET `/api/v3/users/:user_id/dispatches/:dispatch_id.(json|xml)?include_inputs=false` 
+
+Returns the xml of the dispatch.
+
+### URI parameters
+
+Key | Type | Description
+--- | --- | ---
+:user_id | string | Unique string identifier of a User
 :dispatch_id | integer |  The dispatch ID of the dispatch
 include_inputs | boolean | Optional. A flag to include the field data for the dispatch 
 

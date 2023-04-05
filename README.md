@@ -58,8 +58,9 @@ https://docs.devicemagic.com/en/articles/3334936-api-response-codes
       * [GET `/api/v3/users/:user/dispatches.(json|xml)`](./doc/api/dispatch.md#jsonxml-get-index-dispatch-forms-for-a-user)
     * GET organization dispatches
       * [GET `/api/v3/organization_dispatches.(json|xml)`](./doc/api/dispatch.md#jsonxml-get-organization-dispatches)
-    * GET show
-      * [GET `/api/v3/dispatches/:dispatch_id.(json|xml)`](./doc/api/dispatch.md#jsonxml-get-show-dispatch)
+    * GET show a dispatch form for device or user
+      * [GET `/api/v3/devices/:device_identifier/dispatches/:dispatch_id.(json|xml)`](./doc/api/dispatch.md#jsonxml-get-show-dispatch-form-for-a-device)
+      * [GET `/api/v3/users/:user/dispatches/:dispatch_id.(json|xml)`](./doc/api/dispatch.md#jsonxml-get-show-dispatch-form-for-a-user)
     * POST create dispatch form for a device or user
       * [POST `/api/v3/devices/:device_identifier/dispatches.json`](./doc/api/dispatch.md#jsonxml-post-create-dispatch-form-for-a-device)
       * [POST `/api/v3/users/:user/dispatches.json`](./doc/api/dispatch.md#jsonxml-post-create-dispatch-form-for-a-user)

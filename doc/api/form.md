@@ -215,7 +215,7 @@ Key | Type | Description
 :organization_id | integer | Unique identifier of your oganization
 :form_id | integer | id of the 
 
-**Example JSON POST Request Body:**
+**Example JSON PUT Request Body:**
 
 ```json
 {
@@ -249,7 +249,7 @@ Key | Type | Description
 }
 ```
 
-**Example XML POST Request Body:**
+**Example XML PUT Request Body:**
 
 ```xml
 <h:html
@@ -356,7 +356,7 @@ Key | Type | Description
 
 ---
 
-## PUT Unocking a form
+## PUT Unlocking a form
 
 * PUT `api/v3/forms/:form_id/unlock` 
 
