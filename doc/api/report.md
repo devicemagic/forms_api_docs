@@ -20,6 +20,7 @@ Key | Type |  Required | Description
 * Org Id
 * Org Short Name
 * Org Name
+* Device ID
 * Form Id
 * Form Name
 * Pending Submission Id
