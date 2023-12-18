@@ -14,11 +14,8 @@ Key | Type |  Required | Description
 --- | --- | --- | ---
 :month | integer | true | the month of the report to retrieve
 :year | integer | true | the year of the report to retrieve 
----
 
 **Fields Returned:**
-
-
 ```
 * Org Id
 * Org Short Name
@@ -38,3 +35,4 @@ Key | Type |  Required | Description
 * File Size
 * Repeat Group Count
 ```
+---
