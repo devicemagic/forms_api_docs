@@ -98,7 +98,10 @@ https://docs.devicemagic.com/en/articles/3334936-api-response-codes
     * PUT update a group
       * [PUT `/api/organizations/[org_id]/groups/:group_id`](./doc/api/group.md#jsonxml-put-update-group)
     * DELETE destroy a group
-      * [DELETE `/api/organizations/[org_id]/groups/:group_id`](./doc/api/group.md#delete-destroy-group)      
+      * [DELETE `/api/organizations/[org_id]/groups/:group_id`](./doc/api/group.md#delete-destroy-group)
+  * [Report](./doc/api/report.md)
+    * GET Performance Metric Report
+      * [GET `/api/performance_metric_report`](./doc/api/report.md#csv-get-performance-metric-report)      
   * [Resource](./doc/api/resource.md)
     * GET list resources
       * [GET `/api/resources`](./doc/api/resource.md#jsonxml-get-list-resources)
