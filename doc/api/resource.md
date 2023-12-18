@@ -58,7 +58,7 @@ Key | Type |  Required | Description
 --- | --- | --- | ---
 :resource_id | integer | true | id of the 
 
-Returns the contesnts of the resource
+Returns the contents of the resource
 
 ---
 

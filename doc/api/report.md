@@ -14,13 +14,12 @@ Key | Type |  Required | Description
 --- | --- | --- | ---
 :month | integer | true | the month of the report to retrieve
 :year | integer | true | the year of the report to retrieve 
-
-
-Returns the contesnts of the resource
-
 ---
 
-```Fields Returned
+**Fields Returned:**
+
+
+```
 * Org Id
 * Org Short Name
 * Org Name
