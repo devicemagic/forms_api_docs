@@ -109,19 +109,25 @@ https://docs.devicemagic.com/en/articles/3334936-api-response-codes
       * [GET `/api/resources/:resource_id`](./doc/api/resource.md#get-download-resource)
     * GET describe a resource
       * [GET `/api/v3/resources/:resource_id/describe`](./doc/api/resource.md#jsonxml-get-describe-resource)
-    * POST create a resource
+    * POST create a resource - Deprecated, please [migrate](./doc/api/resource_v4_migration.md#1.-endpoint-changes) to v4
       * [POST `/api/v3/resources`](./doc/api/resource.md#json-post-create-resource)
-    * PUT update a resource
+    * PUT update a resource - Deprecated, please [migrate](./doc/api/resource_v4_migration.md#1.-endpoint-changes) to v4
       * [PUT `/api/v3/resources/:resource_id`](./doc/api/resource.md#json-put-update-resource)
     * DELETE destroy a resource
-      * [DELETE `/api/resources/:resource_id`](./doc/api/resource.md#delete-destroy-resource)      
+      * [DELETE `/api/resources/:resource_id`](./doc/api/resource.md#delete-destroy-resource)
+    * POST create a resource asynchronously
+      * [POST `/api/v4/resources`](./doc/api/resource_v4.md#v4-json-post-create-resource)
+    * PUT update a resource asynchronously
+      * [PUT `/api/v4/resources/:resource_id`](./doc/api/resource_v4.md#v4-json-put-update-resource)
+    * GET shows the status of an asynchronous resource update
+      * [GET `/api/v4/async_resource_updates/:async_resource_update_id`](./doc/api/resource_v4.md#v4-json-put-update-resource)
   * [Submission](./doc/api/submission.md)
     * GET view submissions in Device Magic Database
       * [GET `/api/forms/:form_id/device_magic_database.json`](./doc/api/submission.md#json-get-view-submissions-in-device-magic-database)
     * GET all submission authors
       * [GET `/api/v3/submission_authors.(json|xml)`](./doc/api/submission.md#jsonxml-get-all-submission-authors)
     * GET original submission xml
-      * [GET `/api/v3/submissions/:user_id`](./doc/api/submission.md#xml-get-original-submission-xml)
+      * [GET `/api/v3/submissions/:submission_id`](./doc/api/submission.md#xml-get-original-submission-xml)
     * POST create submission from a form for a device or user
       * [POST `/api/v3/devices/:device_identifier/submissions.json`](./doc/api/submission.md#json-post-create-submission-from-a-form-for-a-device)
       * [POST `/api/v3/users/:user/submissions.json`](./doc/api/submission.md#json-post-create-submission-from-a-form-for-a-user)
