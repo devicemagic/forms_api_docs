@@ -160,7 +160,7 @@ Key | Type | Description
 --- | --- | ---
 file_name | string | The name of the file
 file_data  | binary | Base64 encoded file data
-content_type | string | See supported [`mime types`](./resource.md#suported-mime-types) below
+content_type | string | See supported [`mime types`](./resource.md#supported-mime-types) below
 
 **Example JSON POST Request Body:**
 
@@ -204,7 +204,7 @@ Key | Type | Description
 --- | --- | ---
 file_name | string | The name of the file
 file_data  | binary | Base64 encoded file data
-content_type | string | See supported [`mime types`](./resource.md#suported-mime-types) below
+content_type | string | See supported [`mime types`](./resource.md#supported-mime-types) below
 
 **Example JSON PUT Request Body:**
 
@@ -221,7 +221,7 @@ content_type | string | See supported [`mime types`](./resource.md#suported-mime
 }
 ```
 
-## Suported MIME types: ##
+## Supported MIME types: ##
 * image/png
 * image/jpeg
 * application/xml
